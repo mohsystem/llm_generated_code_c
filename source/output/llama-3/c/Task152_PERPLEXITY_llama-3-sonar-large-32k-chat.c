@@ -1,5 +1,6 @@
 // C does not support classes or templates, so we have to use structures and functions
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 #define SIZE 11

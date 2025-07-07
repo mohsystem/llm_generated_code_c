@@ -1,5 +1,6 @@
 // Note: C does not have a built-in priority queue, so we will use a simple array to implement the heap.
 #include <stdio.h>
+#include <stdlib.h>
 
 typedef struct {
     int size;

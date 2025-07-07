@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <semaphore.h>
 #include <pthread.h>
+#include <stdlib.h>
 
 typedef void (*printNumber_t)(int);
 

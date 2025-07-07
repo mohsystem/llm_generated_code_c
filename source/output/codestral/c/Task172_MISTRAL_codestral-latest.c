@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
+#include <stdlib.h>
 
 bool repeatedSubstringPattern(char* s) {
     int n = strlen(s);
