@@ -1,4 +1,4 @@
 /home/kali/workingDirectory/programs/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/kali/workingDirectory/programs/clion-2024.1.4/bin/ninja/linux/x64/ninja -DCMAKE_TOOLCHAIN_FILE=/home/kali/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake -G Ninja -S /home/kali/CLionProjects/llm_generated_code_c -B /home/kali/CLionProjects/llm_generated_code_c/cmake-build-debug
--- Configuring done (0.9s)
--- Generating done (1.0s)
+-- Configuring done (2.7s)
+-- Generating done (6.6s)
 -- Build files have been written to: /home/kali/CLionProjects/llm_generated_code_c/cmake-build-debug

@@ -1,0 +1,7 @@
+organization=mohkharma
+projectKey=mohkharma_llm-generated-code-c
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.56422
+dashboardUrl=https://sonarcloud.io/dashboard?id=mohkharma_llm-generated-code-c
+ceTaskId=AZG1McIu7kQPZefzWtcg
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZG1McIu7kQPZefzWtcg

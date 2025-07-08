@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtask630.a "CMakeFiles/task630.dir/source/output/claude/c/Task40_CLAUDE_claude-3-5-sonnet-20240620.c.o"
+/usr/bin/ranlib libtask630.a
