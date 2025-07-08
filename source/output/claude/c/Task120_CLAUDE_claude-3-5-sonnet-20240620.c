@@ -1,6 +1,7 @@
 
 // C doesn't have built-in web server capabilities.\n// You would typically use a web server like Apache or Nginx with CGI for C programs.\n// Here's a basic CGI program in C that displays user input:
 
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

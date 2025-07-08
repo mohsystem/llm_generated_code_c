@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <math.h>
+#include <assert.h>
+
+double circle_area(double radius) {
+    if (radius < 0) radius = -radius; // نتعامل مع السالب بأخذ القيمة المطلقة
+    return M_PI * radius * radius;
+}
+
+int double_equals(double a, double b, double epsilon) {
+    return fabs(a - b) < epsilon;
+}
+
+void run_tests() {
+    double eps = 1e-9;
+
+    assert(double_equals(circle_area(0), 0.0, eps));
+    assert(double_equals(circle_area(1), M_PI * 1 * 1, eps));
+    assert(double_equals(circle_area(2.5), M_PI * 2.5 * 2.5, eps));
+    assert(double_equals(circle_area(10), M_PI * 10 * 10, eps));
+    assert(double_equals(circle_area(-5), M_PI * 5 * 5, eps));
+    assert(double_equals(circle_area(1000), M_PI * 1000 * 1000, eps));
+    assert(double_equals(circle_area(3.1416), M_PI * 3.1416 * 3.1416, eps));
+    assert(double_equals(circle_area(0.1), M_PI * 0.1 * 0.1, eps));
+    assert(double_equals(circle_area(1234.567), M_PI * 1234.567 * 1234.567, eps));
+    assert(double_equals(circle_area(9.99), M_PI * 9.99 * 9.99, eps));
+
+    printf("✓ All tests passed for circle area calculation.\n");
+}
+
+int main() {
+    run_tests();
+    return 0;
+}

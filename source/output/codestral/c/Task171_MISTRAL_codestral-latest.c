@@ -1,3 +1,6 @@
+#include <stdlib.h>
+#include <string.h>
+
 int reversePairs(int* nums, int numsSize) {
     int mergeSort(int* nums, int start, int end) {
         if (start >= end) {

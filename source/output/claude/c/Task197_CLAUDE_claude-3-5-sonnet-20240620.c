@@ -1,6 +1,7 @@
 
 #include <stdlib.h>
 #include <math.h>
+#include <time.h>
 
 typedef struct {
     double radius;

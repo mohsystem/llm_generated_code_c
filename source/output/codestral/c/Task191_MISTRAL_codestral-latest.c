@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <tgmath.h>
 
 int longestValidParentheses(char *s) {
     int *stack = (int *)malloc(sizeof(int) * (strlen(s) + 1));

@@ -1,4 +1,6 @@
 
+#include <stdlib.h>
+
 typedef struct {
     int* products;
     int size;
