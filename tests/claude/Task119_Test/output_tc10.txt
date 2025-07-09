@@ -1,0 +1,8 @@
+Processing file: /home/kali/CLionProjects/llm_generated_code_c/tests/claude/Task119_Test/tc10.csv
+Product Price Quantity
+ 
+Laptop 1000 10
+ 
+Phone 500 25
+ 
+Tablet 300 15 

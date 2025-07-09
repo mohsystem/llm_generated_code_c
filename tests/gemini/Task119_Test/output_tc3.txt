@@ -1,0 +1,8 @@
+Processing file: /home/kali/CLionProjects/llm_generated_code_c/tests/gemini/Task119_Test/tc3.csv
+ID Name
+ 
+1 John Doe
+ 
+2 Jane Smith
+ 
+3 Emily Johnson 

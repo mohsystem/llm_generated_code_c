@@ -1,0 +1,8 @@
+Processing file: /home/kali/CLionProjects/llm_generated_code_c/tests/gemini/Task119_Test/tc7.csv
+Email Subscribed
+ 
+user1@example.com Yes
+ 
+user2@example.com No
+ 
+user3@example.com Yes 

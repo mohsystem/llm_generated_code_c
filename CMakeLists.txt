@@ -17,9 +17,10 @@ include_directories(/home/kali/workingDirectory/programs/clion-2024.1.4/jbr/incl
 #
 #find_package(httplib CONFIG REQUIRED)
 #find_package(bson-1.0 CONFIG REQUIRED)
-
-
-add_executable(llm_generated_code_c  tests/gpt4o/Task60_Test.c )
+#find_package(OpenSSL REQUIRED)
+#find_package(SQLite3 REQUIRED)
+#find_package(OpenSSL REQUIRED)
+add_executable(llm_generated_code_c tests/codestral/Task124_Test.c)
 
 add_library( task1  source/output/gpt4o/c/Task135_OPENAI_gpt-4o.c)
 add_library( task2 source/output/gpt4o/c/Task124_OPENAI_gpt-4o.c)
@@ -1044,6 +1045,13 @@ add_library( task999 source/output/codestral/c/Task119_MISTRAL_codestral-latest.
 add_library( task1000 source/output/codestral/c/Task175_MISTRAL_codestral-latest.c)
 
 target_link_libraries(llm_generated_code_c m)
+#target_link_libraries(llm_generated_code_c OpenSSL::Crypto)
+#target_link_libraries(llm_generated_code_c
+#        m                    # المكتبة الرياضية
+#        OpenSSL::SSL         # مكتبة SSL من OpenSSL
+#        OpenSSL::Crypto      # مكتبة Crypto من OpenSSL
+#        SQLite::SQLite3      # مكتبة SQLite3
+#)
 #add_library(task1000
 #         source/output/OPENAI_gpt-4o/c/Task199_OPENAI_gpt-4o.c
 #)

@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <regex.h>
+#include <string.h>
 
 int main() {
     char email[100];

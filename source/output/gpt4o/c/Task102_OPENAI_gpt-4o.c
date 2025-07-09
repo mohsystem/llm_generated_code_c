@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <openssl/sha.h>
 #include <sqlite3.h>
+#include <string.h>
 
 void hashPassword(const char* password, char* outputBuffer) {
     unsigned char hash[SHA256_DIGEST_LENGTH];

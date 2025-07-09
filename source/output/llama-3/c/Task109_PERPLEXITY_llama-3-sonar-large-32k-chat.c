@@ -2,6 +2,7 @@
 // You can use the following code, but it requires the POSIX regex library to be installed and linked:
 #include <regex.h>
 #include <stdio.h>
+#include <string.h>
 
 int main() {
     regex_t pattern;

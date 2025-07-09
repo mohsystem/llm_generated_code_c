@@ -1,0 +1,8 @@
+Processing file: /home/kali/CLionProjects/llm_generated_code_c/tests/codestral/Task119_Test/tc5.csv
+City State Population
+ 
+New York NY 8419000
+ 
+Los Angeles CA 3980000
+ 
+Chicago IL 2716000 
