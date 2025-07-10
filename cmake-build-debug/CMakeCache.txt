@@ -192,6 +192,9 @@ CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=/home/kali/.vcpkg-clion/vcpkg/scripts/buildsy
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//The directory containing a CMake configuration file for CURL.
+CURL_DIR:PATH=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/share/curl
+
 //Path to a library.
 OPENSSL_CRYPTO_LIBRARY:FILEPATH=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libcrypto.a
 
@@ -215,6 +218,9 @@ SQLite3_INCLUDE_DIR:PATH=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/inclu
 
 //Path to a library.
 SQLite3_LIBRARY:FILEPATH=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libsqlite3.a
+
+//Path to a library.
+UUID_LIB:FILEPATH=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libuuid.a
 
 //Automatically copy dependencies into the output directory for
 // executables.
@@ -255,12 +261,24 @@ X_VCPKG_APPLOCAL_DEPS_INSTALL:BOOL=OFF
 // serialization.
 X_VCPKG_APPLOCAL_DEPS_SERIALIZED:BOOL=OFF
 
+//Path to a file.
+ZLIB_INCLUDE_DIR:PATH=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/include
+
+//Path to a library.
+ZLIB_LIBRARY_DEBUG:FILEPATH=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libz.a
+
+//Path to a library.
+ZLIB_LIBRARY_RELEASE:FILEPATH=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/lib/libz.a
+
 //Path to a program.
 Z_VCPKG_CL:FILEPATH=Z_VCPKG_CL-NOTFOUND
 
 //The directory which contains the installed libraries for each
 // triplet
 _VCPKG_INSTALLED_DIR:PATH=/home/kali/.vcpkg-clion/vcpkg/installed
+
+//The directory containing a CMake configuration file for cJSON.
+cJSON_DIR:PATH=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/share/cjson
 
 //Value Computed by CMake
 llm_generated_code_c_BINARY_DIR:STATIC=/home/kali/CLionProjects/llm_generated_code_c/cmake-build-debug
@@ -276,6 +294,12 @@ miniz/miniz_DIR:PATH=miniz/miniz_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for miniz.
 miniz_DIR:PATH=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/share/miniz
+
+//Path to a library.
+pkgcfg_lib_MHD_microhttpd:FILEPATH=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libmicrohttpd.a
+
+//Path to a library.
+pkgcfg_lib_MHD_pthread:FILEPATH=/usr/lib/x86_64-linux-gnu/libpthread.a
 
 //Path to a library.
 pkgcfg_lib__OPENSSL_crypto:FILEPATH=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libcrypto.a
@@ -423,12 +447,59 @@ CMAKE_TOOLCHAIN_FILE-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CURL_LIBRARY_DEBUG
+CURL_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//vcpkg
+CURL_LIBRARY_DEBUG:INTERNAL=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libcurl-d.a
+//ADVANCED property for variable: CURL_LIBRARY_RELEASE
+CURL_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//vcpkg
+CURL_LIBRARY_RELEASE:INTERNAL=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/lib/libcurl.a
 //Details about finding OpenSSL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libcrypto.a][/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/include][c ][v3.3.1()]
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v1.8.1()]
 //Details about finding SQLite3
 FIND_PACKAGE_MESSAGE_DETAILS_SQLite3:INTERNAL=[/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/include][/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libsqlite3.a][v3.46.0()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//Details about finding ZLIB
+FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[optimized;/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/lib/libz.a;debug;/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libz.a][/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/include][c ][v1.3.1(1)]
+MHD_CFLAGS:INTERNAL=-I/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../../include
+MHD_CFLAGS_I:INTERNAL=
+MHD_CFLAGS_OTHER:INTERNAL=
+MHD_FOUND:INTERNAL=1
+MHD_INCLUDEDIR:INTERNAL=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../../include
+MHD_INCLUDE_DIRS:INTERNAL=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../../include
+MHD_LDFLAGS:INTERNAL=-L/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../lib;-lmicrohttpd;-lpthread
+MHD_LDFLAGS_OTHER:INTERNAL=
+MHD_LIBDIR:INTERNAL=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../lib
+MHD_LIBRARIES:INTERNAL=microhttpd;pthread
+MHD_LIBRARY_DIRS:INTERNAL=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../lib
+MHD_LIBS:INTERNAL=
+MHD_LIBS_L:INTERNAL=
+MHD_LIBS_OTHER:INTERNAL=
+MHD_LIBS_PATHS:INTERNAL=
+MHD_MODULE_NAME:INTERNAL=libmicrohttpd
+MHD_PREFIX:INTERNAL=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../..
+MHD_STATIC_CFLAGS:INTERNAL=-I/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../../include
+MHD_STATIC_CFLAGS_I:INTERNAL=
+MHD_STATIC_CFLAGS_OTHER:INTERNAL=
+MHD_STATIC_INCLUDE_DIRS:INTERNAL=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../../include
+MHD_STATIC_LDFLAGS:INTERNAL=-L/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../lib;-lmicrohttpd;-lpthread
+MHD_STATIC_LDFLAGS_OTHER:INTERNAL=
+MHD_STATIC_LIBDIR:INTERNAL=
+MHD_STATIC_LIBRARIES:INTERNAL=microhttpd;pthread
+MHD_STATIC_LIBRARY_DIRS:INTERNAL=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../lib
+MHD_STATIC_LIBS:INTERNAL=
+MHD_STATIC_LIBS_L:INTERNAL=
+MHD_STATIC_LIBS_OTHER:INTERNAL=
+MHD_STATIC_LIBS_PATHS:INTERNAL=
+MHD_VERSION:INTERNAL=1.0.1
+MHD_libmicrohttpd_INCLUDEDIR:INTERNAL=
+MHD_libmicrohttpd_LIBDIR:INTERNAL=
+MHD_libmicrohttpd_PREFIX:INTERNAL=
+MHD_libmicrohttpd_VERSION:INTERNAL=
 //ADVANCED property for variable: OPENSSL_CRYPTO_LIBRARY
 OPENSSL_CRYPTO_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENSSL_INCLUDE_DIR
@@ -451,6 +522,12 @@ SQLite3_LIBRARY-ADVANCED:INTERNAL=1
 VCPKG_MANIFEST_INSTALL:INTERNAL=OFF
 //ADVANCED property for variable: VCPKG_VERBOSE
 VCPKG_VERBOSE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_INCLUDE_DIR
+ZLIB_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_DEBUG
+ZLIB_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_RELEASE
+ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //Making sure VCPKG_MANIFEST_MODE doesn't change
 Z_VCPKG_CHECK_MANIFEST_MODE:INTERNAL=OFF
 //Vcpkg root directory
@@ -492,8 +569,14 @@ _OPENSSL_openssl_INCLUDEDIR:INTERNAL=
 _OPENSSL_openssl_LIBDIR:INTERNAL=
 _OPENSSL_openssl_PREFIX:INTERNAL=
 _OPENSSL_openssl_VERSION:INTERNAL=
+__pkg_config_arguments_MHD:INTERNAL=REQUIRED;libmicrohttpd
 __pkg_config_arguments__OPENSSL:INTERNAL=QUIET;openssl
+__pkg_config_checked_MHD:INTERNAL=1
 __pkg_config_checked__OPENSSL:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_MHD_microhttpd
+pkgcfg_lib_MHD_microhttpd-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_MHD_pthread
+pkgcfg_lib_MHD_pthread-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib__OPENSSL_crypto
 pkgcfg_lib__OPENSSL_crypto-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib__OPENSSL_dl

@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdint.h>
+#include <string.h>
 
 int32_t deserialize_data(const char* data) {
     int32_t result;

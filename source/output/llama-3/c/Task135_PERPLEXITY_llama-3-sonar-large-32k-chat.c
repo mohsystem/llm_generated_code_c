@@ -1,6 +1,7 @@
 // C code using CGI and libuuid
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <uuid/uuid.h>
 
 int main() {

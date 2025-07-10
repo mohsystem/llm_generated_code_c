@@ -5,7 +5,11 @@ set(CMAKE_C_STANDARD 17)
 include_directories(/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/include/)
 include_directories(/usr/include/)
 
+find_package(CURL REQUIRED)
+include_directories(${CURL_INCLUDE_DIRS})
 
+find_package(cJSON REQUIRED)
+include_directories(${CJSON_INCLUDE_DIRS})
 
 #include_directories(/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/include/)
 #include_directories(/home/kali/CLionProjects/mysql-connector-cpp/driver/)
@@ -19,8 +23,17 @@ include_directories(/home/kali/workingDirectory/programs/clion-2024.1.4/jbr/incl
 #find_package(bson-1.0 CONFIG REQUIRED)
 #find_package(OpenSSL REQUIRED)
 #find_package(SQLite3 REQUIRED)
-#find_package(OpenSSL REQUIRED)
-add_executable(llm_generated_code_c tests/codestral/Task124_Test.c)
+find_package(OpenSSL REQUIRED)
+
+
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(MHD REQUIRED libmicrohttpd)
+
+include_directories(${MHD_INCLUDE_DIRS})
+link_directories(${MHD_LIBRARY_DIRS})
+
+find_library(UUID_LIB uuid)
+add_executable(llm_generated_code_c tests/claude/Task172_Test.c)
 
 add_library( task1  source/output/gpt4o/c/Task135_OPENAI_gpt-4o.c)
 add_library( task2 source/output/gpt4o/c/Task124_OPENAI_gpt-4o.c)
@@ -1044,13 +1057,26 @@ add_library( task998 source/output/codestral/c/Task162_MISTRAL_codestral-latest.
 add_library( task999 source/output/codestral/c/Task119_MISTRAL_codestral-latest.c)
 add_library( task1000 source/output/codestral/c/Task175_MISTRAL_codestral-latest.c)
 
-target_link_libraries(llm_generated_code_c m)
+#target_link_libraries(llm_generated_code_c m )
+#target_link_libraries(llm_generated_code_c m ${CJSON_LIBRARIES})
+
+#target_link_libraries(llm_generated_code_c m ${CURL_LIBRARIES})
 #target_link_libraries(llm_generated_code_c OpenSSL::Crypto)
+
+target_link_libraries(llm_generated_code_c
+        m                    # المكتبة الرياضية
+        ${MHD_LIBRARIES}
+        OpenSSL::SSL         # مكتبة SSL من OpenSSL
+                OpenSSL::Crypto      # مكتبة Crypto من OpenSSL
+         ${UUID_LIB} microhttpd
+        ${CURL_LIBRARIES}
+)
+
+
 #target_link_libraries(llm_generated_code_c
 #        m                    # المكتبة الرياضية
 #        OpenSSL::SSL         # مكتبة SSL من OpenSSL
 #        OpenSSL::Crypto      # مكتبة Crypto من OpenSSL
-#        SQLite::SQLite3      # مكتبة SQLite3
 #)
 #add_library(task1000
 #         source/output/OPENAI_gpt-4o/c/Task199_OPENAI_gpt-4o.c
