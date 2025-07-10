@@ -47,7 +47,7 @@
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 1066,
+				"line" : 1075,
 				"parent" : 0
 			},
 			{
@@ -143,32 +143,7 @@
 			},
 			{
 				"backtrace" : 4,
-				"fragment" : "-lmicrohttpd",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 4,
-				"fragment" : "-lpthread",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 4,
-				"fragment" : "/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libssl.a",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 4,
-				"fragment" : "/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libcrypto.a",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 4,
-				"fragment" : "/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libuuid.a",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 4,
-				"fragment" : "-lmicrohttpd",
+				"fragment" : "/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libsqlite3.a",
 				"role" : "libraries"
 			},
 			{
@@ -223,21 +198,6 @@
 			},
 			{
 				"backtrace" : 4,
-				"fragment" : "-lpthread",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 4,
-				"fragment" : "/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libuuid.a",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 4,
-				"fragment" : "/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libcurl-d.a",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 4,
 				"fragment" : "/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libssl.a",
 				"role" : "libraries"
 			},
@@ -254,16 +214,16 @@
 			{
 				"backtrace" : 4,
 				"fragment" : "/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libcrypto.a",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 4,
-				"fragment" : "/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libz.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 4,
 				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libz.a",
 				"role" : "libraries"
 			}
 		],
@@ -291,7 +251,7 @@
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "tests/llama-3/Task45_Test.c",
+			"path" : "tests/llama-3/Task52_Test.c",
 			"sourceGroupIndex" : 0
 		}
 	],

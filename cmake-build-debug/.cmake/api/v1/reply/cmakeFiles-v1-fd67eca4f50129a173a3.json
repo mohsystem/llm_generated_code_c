@@ -274,6 +274,21 @@
 			"path" : "/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/share/cjson/cjson-release.cmake"
 		},
 		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/kali/workingDirectory/programs/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindSQLite3.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/kali/workingDirectory/programs/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/kali/workingDirectory/programs/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageMessage.cmake"
+		},
+		{
 			"isExternal" : true,
 			"path" : "/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/share/openssl/vcpkg-cmake-wrapper.cmake"
 		},

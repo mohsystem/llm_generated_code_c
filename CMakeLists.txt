@@ -22,7 +22,7 @@ include_directories(/home/kali/workingDirectory/programs/clion-2024.1.4/jbr/incl
 #find_package(httplib CONFIG REQUIRED)
 #find_package(bson-1.0 CONFIG REQUIRED)
 #find_package(OpenSSL REQUIRED)
-#find_package(SQLite3 REQUIRED)
+find_package(SQLite3 REQUIRED)
 find_package(OpenSSL REQUIRED)
 
 
@@ -33,7 +33,7 @@ include_directories(${MHD_INCLUDE_DIRS})
 link_directories(${MHD_LIBRARY_DIRS})
 
 find_library(UUID_LIB uuid)
-add_executable(llm_generated_code_c tests/llama-3/Task45_Test.c)
+add_executable(llm_generated_code_c tests/llama-3/Task52_Test.c)
 
 add_library( task1  source/output/gpt4o/c/Task135_OPENAI_gpt-4o.c)
 add_library( task2 source/output/gpt4o/c/Task124_OPENAI_gpt-4o.c)
@@ -1063,12 +1063,18 @@ add_library( task1000 source/output/codestral/c/Task175_MISTRAL_codestral-latest
 #target_link_libraries(llm_generated_code_c m ${CURL_LIBRARIES})
 #target_link_libraries(llm_generated_code_c OpenSSL::Crypto)
 
+#target_link_libraries(llm_generated_code_c
+#        m                    # المكتبة الرياضية
+#        ${MHD_LIBRARIES}
+#        OpenSSL::SSL         # مكتبة SSL من OpenSSL
+#                OpenSSL::Crypto      # مكتبة Crypto من OpenSSL
+#         ${UUID_LIB} microhttpd
+#        ${CURL_LIBRARIES}
+#)
+
 target_link_libraries(llm_generated_code_c
         m                    # المكتبة الرياضية
-        ${MHD_LIBRARIES}
-        OpenSSL::SSL         # مكتبة SSL من OpenSSL
-                OpenSSL::Crypto      # مكتبة Crypto من OpenSSL
-         ${UUID_LIB} microhttpd
+        SQLite::SQLite3
         ${CURL_LIBRARIES}
 )
 
