@@ -33,7 +33,7 @@ include_directories(${MHD_INCLUDE_DIRS})
 link_directories(${MHD_LIBRARY_DIRS})
 
 find_library(UUID_LIB uuid)
-add_executable(llm_generated_code_c tests/claude/Task172_Test.c)
+add_executable(llm_generated_code_c tests/llama-3/Task45_Test.c)
 
 add_library( task1  source/output/gpt4o/c/Task135_OPENAI_gpt-4o.c)
 add_library( task2 source/output/gpt4o/c/Task124_OPENAI_gpt-4o.c)

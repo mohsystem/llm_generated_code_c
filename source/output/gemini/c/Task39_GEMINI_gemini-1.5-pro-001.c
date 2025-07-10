@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
 int main() {
     char filename[100];
     printf("Enter the filename: ");
