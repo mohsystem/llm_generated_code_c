@@ -25,6 +25,13 @@ include_directories(/home/kali/workingDirectory/programs/clion-2024.1.4/jbr/incl
 find_package(SQLite3 REQUIRED)
 find_package(OpenSSL REQUIRED)
 
+find_library(MYSQLCLIENT_LIB mysqlclient)
+if (MYSQLCLIENT_LIB)
+    message(STATUS "Found MySQL client library: ${MYSQLCLIENT_LIB}")
+else()
+    message(FATAL_ERROR "MySQL client library not found")
+endif()
+
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(MHD REQUIRED libmicrohttpd)
@@ -33,7 +40,15 @@ include_directories(${MHD_INCLUDE_DIRS})
 link_directories(${MHD_LIBRARY_DIRS})
 
 find_library(UUID_LIB uuid)
-add_executable(llm_generated_code_c tests/llama-3/Task52_Test.c)
+find_package(LibXml2 REQUIRED)
+
+pkg_check_modules(JANSSON REQUIRED jansson)
+
+include_directories(${JANSSON_INCLUDE_DIRS})
+link_directories(${JANSSON_LIBRARY_DIRS})
+
+
+add_executable(llm_generated_code_c tests/llama-3/Task75_Test.c)
 
 add_library( task1  source/output/gpt4o/c/Task135_OPENAI_gpt-4o.c)
 add_library( task2 source/output/gpt4o/c/Task124_OPENAI_gpt-4o.c)
@@ -1075,9 +1090,13 @@ add_library( task1000 source/output/codestral/c/Task175_MISTRAL_codestral-latest
 target_link_libraries(llm_generated_code_c
         m                    # المكتبة الرياضية
         SQLite::SQLite3
+        ${CJSON_LIBRARIES}
         ${CURL_LIBRARIES}
-)
+        ${LIBXML2_LIBRARIES}
+        ${JANSSON_LIBRARIES}
+        ${MYSQLCLIENT_LIB}
 
+)
 
 #target_link_libraries(llm_generated_code_c
 #        m                    # المكتبة الرياضية

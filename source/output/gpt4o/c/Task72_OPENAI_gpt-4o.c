@@ -3,6 +3,7 @@
 #include <string.h>
 #include <openssl/evp.h>
 #include <openssl/aes.h>
+#include <openssl/err.h>
 
 void handleErrors() {
     ERR_print_errors_fp(stderr);

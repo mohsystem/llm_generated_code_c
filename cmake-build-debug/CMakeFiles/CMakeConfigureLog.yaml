@@ -297,3 +297,44 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/kali/workingDirectory/programs/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/kali/workingDirectory/programs/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/home/kali/workingDirectory/programs/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindIconv.cmake:115 (check_c_source_compiles)"
+      - "/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/share/iconv/vcpkg-cmake-wrapper.cmake:3 (_find_package)"
+      - "/home/kali/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake:811 (include)"
+      - "/home/kali/workingDirectory/programs/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/share/libxml2/libxml2-config.cmake:120 (find_dependency)"
+      - "/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/share/libxml2/vcpkg-cmake-wrapper.cmake:2 (_find_package)"
+      - "/home/kali/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake:811 (include)"
+      - "CMakeLists.txt:36 (find_package)"
+    checks:
+      - "Performing Test Iconv_IS_BUILT_IN"
+    directories:
+      source: "/home/kali/CLionProjects/llm_generated_code_c/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-BB0h16"
+      binary: "/home/kali/CLionProjects/llm_generated_code_c/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-BB0h16"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      VCPKG_INSTALLED_DIR: "/home/kali/.vcpkg-clion/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-linux"
+      Z_VCPKG_ROOT_DIR: "/home/kali/.vcpkg-clion/vcpkg"
+    buildResult:
+      variable: "Iconv_IS_BUILT_IN"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kali/CLionProjects/llm_generated_code_c/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-BB0h16'
+        
+        Run Build Command(s): /home/kali/workingDirectory/programs/clion-2024.1.4/bin/ninja/linux/x64/ninja -v cmTC_79a8d
+        [1/2] /usr/bin/cc -DIconv_IS_BUILT_IN  -std=gnu17 -fdiagnostics-color=always -o CMakeFiles/cmTC_79a8d.dir/src.c.o -c /home/kali/CLionProjects/llm_generated_code_c/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-BB0h16/src.c
+        [2/2] : && /usr/bin/cc   CMakeFiles/cmTC_79a8d.dir/src.c.o -o cmTC_79a8d   && :
+        
+      exitCode: 0
+...

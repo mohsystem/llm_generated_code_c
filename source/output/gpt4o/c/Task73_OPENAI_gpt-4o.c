@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <fastcgi/fcgi_stdio.h>
 
 const char* checkPassword(char* password) {
     char adminPassword[] = "admin123";

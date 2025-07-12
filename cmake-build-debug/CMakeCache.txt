@@ -195,6 +195,21 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //The directory containing a CMake configuration file for CURL.
 CURL_DIR:PATH=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/share/curl
 
+//Path to a file.
+LIBLZMA_INCLUDE_DIR:PATH=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/include
+
+//Path to a library.
+LIBLZMA_LIBRARY_DEBUG:FILEPATH=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/liblzma.a
+
+//Path to a library.
+LIBLZMA_LIBRARY_RELEASE:FILEPATH=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/lib/liblzma.a
+
+//The directory containing a CMake configuration file for LibXml2.
+LibXml2_DIR:PATH=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/share/libxml2
+
+//Path to a library.
+MYSQLCLIENT_LIB:FILEPATH=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libmysqlclient.a
+
 //Path to a library.
 OPENSSL_CRYPTO_LIBRARY:FILEPATH=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libcrypto.a
 
@@ -296,6 +311,9 @@ miniz/miniz_DIR:PATH=miniz/miniz_DIR-NOTFOUND
 miniz_DIR:PATH=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/share/miniz
 
 //Path to a library.
+pkgcfg_lib_JANSSON_jansson:FILEPATH=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libjansson.a
+
+//Path to a library.
 pkgcfg_lib_MHD_microhttpd:FILEPATH=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libmicrohttpd.a
 
 //Path to a library.
@@ -318,6 +336,31 @@ unofficial-sqlite3_DIR:PATH=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/sh
 # INTERNAL cache entries
 ########################
 
+CJSON_CFLAGS:INTERNAL=
+CJSON_CFLAGS_I:INTERNAL=
+CJSON_CFLAGS_OTHER:INTERNAL=
+CJSON_FOUND:INTERNAL=
+CJSON_INCLUDEDIR:INTERNAL=
+CJSON_LIBDIR:INTERNAL=
+CJSON_LIBS:INTERNAL=
+CJSON_LIBS_L:INTERNAL=
+CJSON_LIBS_OTHER:INTERNAL=
+CJSON_LIBS_PATHS:INTERNAL=
+CJSON_MODULE_NAME:INTERNAL=
+CJSON_PREFIX:INTERNAL=
+CJSON_STATIC_CFLAGS:INTERNAL=
+CJSON_STATIC_CFLAGS_I:INTERNAL=
+CJSON_STATIC_CFLAGS_OTHER:INTERNAL=
+CJSON_STATIC_LIBDIR:INTERNAL=
+CJSON_STATIC_LIBS:INTERNAL=
+CJSON_STATIC_LIBS_L:INTERNAL=
+CJSON_STATIC_LIBS_OTHER:INTERNAL=
+CJSON_STATIC_LIBS_PATHS:INTERNAL=
+CJSON_VERSION:INTERNAL=
+CJSON_cjson_INCLUDEDIR:INTERNAL=
+CJSON_cjson_LIBDIR:INTERNAL=
+CJSON_cjson_PREFIX:INTERNAL=
+CJSON_cjson_VERSION:INTERNAL=
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -455,6 +498,10 @@ CURL_LIBRARY_DEBUG:INTERNAL=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/de
 CURL_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //vcpkg
 CURL_LIBRARY_RELEASE:INTERNAL=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/lib/libcurl.a
+//Details about finding Iconv
+FIND_PACKAGE_MESSAGE_DETAILS_Iconv:INTERNAL=[built in to C library][v()]
+//Details about finding LibLZMA
+FIND_PACKAGE_MESSAGE_DETAILS_LibLZMA:INTERNAL=[optimized;/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/lib/liblzma.a;debug;/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/liblzma.a][/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/include][1][1][1][v5.6.2()]
 //Details about finding OpenSSL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libcrypto.a][/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/include][c ][v3.3.1()]
 //Details about finding PkgConfig
@@ -464,7 +511,53 @@ FIND_PACKAGE_MESSAGE_DETAILS_SQLite3:INTERNAL=[/home/kali/.vcpkg-clion/vcpkg/ins
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding ZLIB
-FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[optimized;/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/lib/libz.a;debug;/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libz.a][/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/include][c ][v1.3.1(1)]
+FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[optimized;/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/lib/libz.a;debug;/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/libz.a][/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/include][c ][v1.3.1()]
+//Test Iconv_IS_BUILT_IN
+Iconv_IS_BUILT_IN:INTERNAL=1
+JANSSON_CFLAGS:INTERNAL=-I/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../../include
+JANSSON_CFLAGS_I:INTERNAL=
+JANSSON_CFLAGS_OTHER:INTERNAL=
+JANSSON_FOUND:INTERNAL=1
+JANSSON_INCLUDEDIR:INTERNAL=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../../include
+JANSSON_INCLUDE_DIRS:INTERNAL=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../../include
+JANSSON_LDFLAGS:INTERNAL=-L/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../lib;-ljansson
+JANSSON_LDFLAGS_OTHER:INTERNAL=
+JANSSON_LIBDIR:INTERNAL=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../lib
+JANSSON_LIBRARIES:INTERNAL=jansson
+JANSSON_LIBRARY_DIRS:INTERNAL=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../lib
+JANSSON_LIBS:INTERNAL=
+JANSSON_LIBS_L:INTERNAL=
+JANSSON_LIBS_OTHER:INTERNAL=
+JANSSON_LIBS_PATHS:INTERNAL=
+JANSSON_MODULE_NAME:INTERNAL=jansson
+JANSSON_PREFIX:INTERNAL=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../..
+JANSSON_STATIC_CFLAGS:INTERNAL=-I/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../../include
+JANSSON_STATIC_CFLAGS_I:INTERNAL=
+JANSSON_STATIC_CFLAGS_OTHER:INTERNAL=
+JANSSON_STATIC_INCLUDE_DIRS:INTERNAL=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../../include
+JANSSON_STATIC_LDFLAGS:INTERNAL=-L/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../lib;-ljansson
+JANSSON_STATIC_LDFLAGS_OTHER:INTERNAL=
+JANSSON_STATIC_LIBDIR:INTERNAL=
+JANSSON_STATIC_LIBRARIES:INTERNAL=jansson
+JANSSON_STATIC_LIBRARY_DIRS:INTERNAL=/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../lib
+JANSSON_STATIC_LIBS:INTERNAL=
+JANSSON_STATIC_LIBS_L:INTERNAL=
+JANSSON_STATIC_LIBS_OTHER:INTERNAL=
+JANSSON_STATIC_LIBS_PATHS:INTERNAL=
+JANSSON_VERSION:INTERNAL=2.14
+JANSSON_jansson_INCLUDEDIR:INTERNAL=
+JANSSON_jansson_LIBDIR:INTERNAL=
+JANSSON_jansson_PREFIX:INTERNAL=
+JANSSON_jansson_VERSION:INTERNAL=
+LIBLZMA_HAS_AUTO_DECODER:INTERNAL=1
+LIBLZMA_HAS_EASY_ENCODER:INTERNAL=1
+LIBLZMA_HAS_LZMA_PRESET:INTERNAL=1
+//ADVANCED property for variable: LIBLZMA_INCLUDE_DIR
+LIBLZMA_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: LIBLZMA_LIBRARY_DEBUG
+LIBLZMA_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: LIBLZMA_LIBRARY_RELEASE
+LIBLZMA_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 MHD_CFLAGS:INTERNAL=-I/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/debug/lib/pkgconfig/../../../include
 MHD_CFLAGS_I:INTERNAL=
 MHD_CFLAGS_OTHER:INTERNAL=
@@ -569,10 +662,14 @@ _OPENSSL_openssl_INCLUDEDIR:INTERNAL=
 _OPENSSL_openssl_LIBDIR:INTERNAL=
 _OPENSSL_openssl_PREFIX:INTERNAL=
 _OPENSSL_openssl_VERSION:INTERNAL=
+__pkg_config_arguments_JANSSON:INTERNAL=REQUIRED;jansson
 __pkg_config_arguments_MHD:INTERNAL=REQUIRED;libmicrohttpd
 __pkg_config_arguments__OPENSSL:INTERNAL=QUIET;openssl
+__pkg_config_checked_JANSSON:INTERNAL=1
 __pkg_config_checked_MHD:INTERNAL=1
 __pkg_config_checked__OPENSSL:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_JANSSON_jansson
+pkgcfg_lib_JANSSON_jansson-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_MHD_microhttpd
 pkgcfg_lib_MHD_microhttpd-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_MHD_pthread
