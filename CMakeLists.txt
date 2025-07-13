@@ -48,7 +48,7 @@ include_directories(${JANSSON_INCLUDE_DIRS})
 link_directories(${JANSSON_LIBRARY_DIRS})
 
 
-add_executable(llm_generated_code_c tests/codestral/Task94_Test.c)
+add_executable(llm_generated_code_c tests/codestral/Task137_Test/Task137_Test.c)
 
 add_library( task1  source/output/gpt4o/c/Task135_OPENAI_gpt-4o.c)
 add_library( task2 source/output/gpt4o/c/Task124_OPENAI_gpt-4o.c)
@@ -1096,7 +1096,9 @@ target_link_libraries(llm_generated_code_c
         ${JANSSON_LIBRARIES}
         ${MYSQLCLIENT_LIB}
         ${UUID_LIB}
-
+        onion
+        fcgi
+        ${MHD_LIBRARIES}
 )
 
 #target_link_libraries(llm_generated_code_c

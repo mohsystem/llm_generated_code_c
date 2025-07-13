@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <microhttpd.h>
+#include <string.h>
 
 #define PORT 8888
 
