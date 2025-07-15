@@ -8,6 +8,7 @@
 #include <openssl/ssl.h>
 #include <openssl/err.h>
 
+// الدالة كما هي بالضبط من طلبك:
 SSL* create_ssl_ipv6_socket(const char* host, int port) {
     int sock;
     struct addrinfo hints, *res, *p;
@@ -57,22 +58,42 @@ SSL* create_ssl_ipv6_socket(const char* host, int port) {
 
     if (SSL_connect(ssl) == -1) {
         ERR_print_errors_fp(stderr);
+        SSL_free(ssl);
+        SSL_CTX_free(ctx);
+        close(sock);
         return NULL;
     }
 
     return ssl;
 }
 
-int main() {
-    const char* host = "192.168.1.233";  // نفس القيمة في البايثون
-    int port = 443;
-    SSL* ssl = create_ssl_ipv6_socket(host, port);
-    if (ssl) {
-        printf("Test case 1: PASS\n");
+// دالة اختبار الحالة (test case)
+void run_test(const char* host, int port) {
+    SSL *ssl = create_ssl_ipv6_socket(host, port);
+    if (ssl != NULL) {
+        printf("Test create_ssl_ipv6_socket: PASS\n");
         SSL_shutdown(ssl);
         SSL_free(ssl);
     } else {
-        printf("Test case 1: FAIL\n");
+        printf("Test create_ssl_ipv6_socket: FAIL\n");
     }
+}
+
+int main() {
+    // من التست في البايثون:
+    // create_ssl_ipv6_socket("192.168.1.233", 443)
+
+    run_test("fe80::a02c:661e:cd7e:aee5%eth0",
+             443);
+
     return 0;
 }
+
+
+//many steps to run this code.
+/*
+ * creating a Temp OpenSSL Certificate => openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes
+ * Combine Key and Certificate => cat key.pem cert.pem > server.pem
+ * Run the Server => sudo openssl s_server -accept 443 -www -cert server.pem -key server.pem
+ * Then Run the code
+ */

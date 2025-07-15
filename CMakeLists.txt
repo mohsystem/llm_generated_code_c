@@ -46,9 +46,30 @@ pkg_check_modules(JANSSON REQUIRED jansson)
 
 include_directories(${JANSSON_INCLUDE_DIRS})
 link_directories(${JANSSON_LIBRARY_DIRS})
+find_package(parson REQUIRED)
+
+add_executable(llm_generated_code_c tests/gpt4o/Task180_Test.c)
 
 
-add_executable(llm_generated_code_c tests/codestral/Task137_Test/Task137_Test.c)
+
+
+target_link_libraries(llm_generated_code_c
+        m                    # المكتبة الرياضية
+        SQLite::SQLite3
+        ${CJSON_LIBRARIES}
+        ${CURL_LIBRARIES}
+        ${LIBXML2_LIBRARIES}
+        ${JANSSON_LIBRARIES}
+        ${MYSQLCLIENT_LIB}
+        ${UUID_LIB}
+        onion
+        fcgi
+        ${MHD_LIBRARIES}
+        parson
+)
+
+
+
 
 add_library( task1  source/output/gpt4o/c/Task135_OPENAI_gpt-4o.c)
 add_library( task2 source/output/gpt4o/c/Task124_OPENAI_gpt-4o.c)
@@ -1087,19 +1108,7 @@ add_library( task1000 source/output/codestral/c/Task175_MISTRAL_codestral-latest
 #        ${CURL_LIBRARIES}
 #)
 
-target_link_libraries(llm_generated_code_c
-        m                    # المكتبة الرياضية
-        SQLite::SQLite3
-        ${CJSON_LIBRARIES}
-        ${CURL_LIBRARIES}
-        ${LIBXML2_LIBRARIES}
-        ${JANSSON_LIBRARIES}
-        ${MYSQLCLIENT_LIB}
-        ${UUID_LIB}
-        onion
-        fcgi
-        ${MHD_LIBRARIES}
-)
+
 
 #target_link_libraries(llm_generated_code_c
 #        m                    # المكتبة الرياضية
