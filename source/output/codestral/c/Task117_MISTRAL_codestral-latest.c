@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/stat.h>
+
 #include "miniz/miniz.h"
 
 void extractZip(const char* zipFilePath, const char* destDir) {

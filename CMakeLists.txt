@@ -48,7 +48,13 @@ include_directories(${JANSSON_INCLUDE_DIRS})
 link_directories(${JANSSON_LIBRARY_DIRS})
 find_package(parson REQUIRED)
 
-add_executable(llm_generated_code_c tests/gpt4o/Task180_Test.c)
+
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(LIBZIP REQUIRED libzip)
+pkg_check_modules(LIBARCHIVE REQUIRED libarchive)
+
+
+add_executable(llm_generated_code_c tests/llama-3/Task50_Test/Task50_Test.c)
 
 
 
@@ -66,6 +72,8 @@ target_link_libraries(llm_generated_code_c
         fcgi
         ${MHD_LIBRARIES}
         parson
+        ${LIBZIP_LIBRARIES} ${LIBARCHIVE_LIBRARIES}
+        stdc++
 )
 
 
