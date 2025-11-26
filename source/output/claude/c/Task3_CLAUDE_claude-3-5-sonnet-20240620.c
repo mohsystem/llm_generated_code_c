@@ -22,9 +22,9 @@ bool isPangram(const char* str) {
     
     return true;
 }
-
-int main() {
-    const char* test = "The quick brown fox jumps over the lazy dog";
-    printf("%s\\n", isPangram(test) ? "true" : "false");
-    return 0;
-}
+//
+// int main() {
+//     const char* test = "The quick brown fox jumps over the lazy dog";
+//     printf("%s\\n", isPangram(test) ? "true" : "false");
+//     return 0;
+// }

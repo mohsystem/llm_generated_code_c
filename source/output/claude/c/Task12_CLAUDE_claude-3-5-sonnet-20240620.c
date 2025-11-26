@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
+#include <assert.h>
 char* high(const char* s) {
     char* copy = strdup(s);
     char* token = strtok(copy, " ");
@@ -25,10 +25,11 @@ char* high(const char* s) {
     free(copy);
     return result;
 }
-
-int main() {
-    printf("%s\\n", high("man i need a taxi up to ubud")); // Output: taxi
-    printf("%s\\n", high("what time are we climbing up the volcano")); // Output: volcano
-    printf("%s\\n", high("take me to semynak")); // Output: semynak
-    return 0;
-}
+//
+// int main() {
+//     printf("%s\n", high("man i need a taxi up to ubud")); // Output: taxi
+//     printf("%s\n", high("what time are we climbing up the volcano")); // Output: volcano
+//     printf("%s\n", high("take me to semynak")); // Output: semynak
+//     // assert(strcmp(high(""), "") == 0);
+//     return 0;
+// }

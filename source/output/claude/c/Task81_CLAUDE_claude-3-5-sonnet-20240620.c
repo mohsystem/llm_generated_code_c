@@ -10,13 +10,13 @@
 int get_certificate_hash(const char* hostname, int port, char* hash_out) {
     SSL_CTX* ctx = SSL_CTX_new(TLS_client_method());
     if (!ctx) {
-        fprintf(stderr, "Failed to create SSL context\\n");
+        fprintf(stderr, "Failed to create SSL context\n");
         return -1;
     }
 
     SSL* ssl = SSL_new(ctx);
     if (!ssl) {
-        fprintf(stderr, "Failed to create SSL object\\n");
+        fprintf(stderr, "Failed to create SSL object\n");
         SSL_CTX_free(ctx);
         return -1;
     }
@@ -25,7 +25,7 @@ int get_certificate_hash(const char* hostname, int port, char* hash_out) {
 
     BIO* bio = BIO_new_ssl_connect(ctx);
     if (!bio) {
-        fprintf(stderr, "Failed to create BIO object\\n");
+        fprintf(stderr, "Failed to create BIO object\n");
         SSL_free(ssl);
         SSL_CTX_free(ctx);
         return -1;
@@ -36,14 +36,14 @@ int get_certificate_hash(const char* hostname, int port, char* hash_out) {
     BIO_set_conn_hostname(bio, conn_str);
 
     if (BIO_do_connect(bio) <= 0) {
-        fprintf(stderr, "Failed to connect\\n");
+        fprintf(stderr, "Failed to connect\n");
         BIO_free_all(bio);
         SSL_CTX_free(ctx);
         return -1;
     }
 
     if (BIO_do_handshake(bio) <= 0) {
-        fprintf(stderr, "Failed to perform SSL handshake\\n");
+        fprintf(stderr, "Failed to perform SSL handshake\n");
         BIO_free_all(bio);
         SSL_CTX_free(ctx);
         return -1;
@@ -51,7 +51,7 @@ int get_certificate_hash(const char* hostname, int port, char* hash_out) {
 
     X509* cert = SSL_get_peer_certificate(ssl);
     if (!cert) {
-        fprintf(stderr, "Failed to get peer certificate\\n");
+        fprintf(stderr, "Failed to get peer certificate\n");
         BIO_free_all(bio);
         SSL_CTX_free(ctx);
         return -1;
@@ -64,7 +64,7 @@ int get_certificate_hash(const char* hostname, int port, char* hash_out) {
     for (int i = 0; i < SHA256_DIGEST_LENGTH; i++) {
         sprintf(&hash_out[i * 2], "%02x", md[i]);
     }
-    hash_out[SHA256_DIGEST_LENGTH * 2] = '\\0';
+    hash_out[SHA256_DIGEST_LENGTH * 2] = '\0';
 
     X509_free(cert);
     BIO_free_all(bio);
@@ -77,14 +77,14 @@ void check_certificate_hash(const char* hostname, const char* known_hash) {
     char cert_hash[MAX_HASH_LENGTH];
     if (get_certificate_hash(hostname, 443, cert_hash) == 0) {
         if (strcmp(cert_hash, known_hash) == 0) {
-            printf("Certificate hash for %s matches the known hash.\\n", hostname);
+            printf("Certificate hash for %s matches the known hash.\n", hostname);
         } else {
-            printf("Certificate hash for %s does not match the known hash.\\n", hostname);
-            printf("Calculated hash: %s\\n", cert_hash);
-            printf("Known hash:     %s\\n", known_hash);
+            printf("Certificate hash for %s does not match the known hash.\n", hostname);
+            printf("Calculated hash: %s\n", cert_hash);
+            printf("Known hash:     %s\n", known_hash);
         }
     } else {
-        fprintf(stderr, "Error getting certificate hash\\n");
+        fprintf(stderr, "Error getting certificate hash\n");
     }
 }
 

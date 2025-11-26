@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtask463.a "CMakeFiles/task463.dir/source/output/gemini/c/Task42_GEMINI_gemini-1.5-pro-001.c.o"
+/usr/bin/ranlib libtask463.a

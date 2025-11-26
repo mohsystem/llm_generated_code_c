@@ -8,7 +8,7 @@ int convertBinaryArrayToInt(int* binary, int size) {
     for (int i = 0; i < size; i++) {
         binaryString[i] = binary[i] + '0';
     }
-    binaryString[size] = '\\0';
+    binaryString[size] = '\0';
     
     int result = (int)strtol(binaryString, NULL, 2);
     free(binaryString);
@@ -23,26 +23,26 @@ void printArray(int* arr, int size) {
     }
     printf("]");
 }
-
-int main() {
-    int testCases[][4] = {
-        {0, 0, 0, 1},
-        {0, 0, 1, 0},
-        {0, 1, 0, 1},
-        {1, 0, 0, 1},
-        {0, 0, 1, 0},
-        {0, 1, 1, 0},
-        {1, 1, 1, 1},
-        {1, 0, 1, 1}
-    };
-
-    int numTestCases = sizeof(testCases) / sizeof(testCases[0]);
-
-    for (int i = 0; i < numTestCases; i++) {
-        printf("Testing: ");
-        printArray(testCases[i], 4);
-        printf(" ==> %d\\n", convertBinaryArrayToInt(testCases[i], 4));
-    }
-
-    return 0;
-}
+//
+// int main() {
+//     int testCases[][4] = {
+//         {0, 0, 0, 1},
+//         {0, 0, 1, 0},
+//         {0, 1, 0, 1},
+//         {1, 0, 0, 1},
+//         {0, 0, 1, 0},
+//         {0, 1, 1, 0},
+//         {1, 1, 1, 1},
+//         {1, 0, 1, 1}
+//     };
+//
+//     int numTestCases = sizeof(testCases) / sizeof(testCases[0]);
+//
+//     for (int i = 0; i < numTestCases; i++) {
+//         printf("Testing: ");
+//         printArray(testCases[i], 4);
+//         printf(" ==> %d\\n", convertBinaryArrayToInt(testCases[i], 4));
+//     }
+//
+//     return 0;
+// }

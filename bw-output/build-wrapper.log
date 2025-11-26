@@ -1,0 +1,316 @@
+Tue Sep 03 02:56:38 2024: build-wrapper, version 6.57 (linux-x86)
+Tue Sep 03 02:56:38 2024: System name: Linux Nodename: kali Release: 6.4.0-kali3-amd64 Version: #1 SMP PREEMPT_DYNAMIC Debian 6.4.11-1kali1 (2023-08-21) Machine: x86_64
+Tue Sep 03 02:56:38 2024: socket path: /tmp/build-wrapper-socket.eHuvPp
+Tue Sep 03 02:56:38 2024: dynamic library found: /home/kali/workingDirectory/programs/build-wrapper-linux-x86/libinterceptor-i686.so
+Tue Sep 03 02:56:38 2024: dynamic library found: /home/kali/workingDirectory/programs/build-wrapper-linux-x86/libinterceptor-x86_64.so
+Tue Sep 03 02:56:38 2024: dynamic library found: /home/kali/workingDirectory/programs/build-wrapper-linux-x86/libinterceptor-haswell.so
+Tue Sep 03 02:56:38 2024: cwd: </home/kali/CLionProjects/llm_generated_code_c>
+Tue Sep 03 02:56:38 2024: command executed as: <build-wrapper-linux-x86-64 --out-dir bw-output>
+Tue Sep 03 02:56:38 2024: out-dir absolute path: </home/kali/CLionProjects/llm_generated_code_c/bw-output>
+Tue Sep 03 02:56:38 2024: command line received: <cmake --build cmake-build-debug>
+Tue Sep 03 02:56:38 2024: env 0: <PATH=/home/kali/workingDirectory/programs/clion-2024.1.4/bin/cmake/linux/x64/bin:/home/kali/workingDirectory/programs/build-wrapper-linux-x86:/home/kali/workingDirectory/programs/sonar-scanner-6.1.0.4477-linux-x64/bin:/home/kali:/home/kali/workingDirectory/programs/clion-2024.1.4/bin:/home/kali/workingDirectory/programs/clion-2024.1.4/bin/cmake/linux/x64/bin:/home/kali/workingDirectory/programs/clion-2024.1.4/bin/ninja/linux/x64/:/home/kali/.local/bin:/home/kali/workingDirectory/programs/clion-2024.1.4/bin/cmake/linux/x64/bin:/home/kali/workingDirectory/programs/build-wrapper-linux-x86:/home/kali/workingDirectory/programs/sonar-scanner-6.1.0.4477-linux-x64/bin:/home/kali:/home/kali/workingDirectory/programs/clion-2024.1.4/bin:/home/kali/workingDirectory/programs/clion-2024.1.4/bin/cmake/linux/x64/bin:/home/kali/workingDirectory/programs/clion-2024.1.4/bin/ninja/linux/x64/:/home/kali/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games>
+Tue Sep 03 02:56:38 2024: env 1: <XAUTHORITY=/home/kali/.Xauthority>
+Tue Sep 03 02:56:38 2024: env 2: <XMODIFIERS=@im=ibus>
+Tue Sep 03 02:56:38 2024: env 3: <XDG_DATA_DIRS=/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share>
+Tue Sep 03 02:56:38 2024: env 4: <GDMSESSION=lightdm-xsession>
+Tue Sep 03 02:56:38 2024: env 5: <LESS_TERMCAP_se=[0m>
+Tue Sep 03 02:56:38 2024: env 6: <GTK_IM_MODULE=ibus>
+Tue Sep 03 02:56:38 2024: env 7: <DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus>
+Tue Sep 03 02:56:38 2024: env 8: <LESS_TERMCAP_so=[01;33m>
+Tue Sep 03 02:56:38 2024: env 9: <XDG_CURRENT_DESKTOP=XFCE>
+Tue Sep 03 02:56:38 2024: env 10: <QT_AUTO_SCREEN_SCALE_FACTOR=0>
+Tue Sep 03 02:56:38 2024: env 11: <SSH_AGENT_PID=1171>
+Tue Sep 03 02:56:38 2024: env 12: <COLORTERM=truecolor>
+Tue Sep 03 02:56:38 2024: env 13: <SESSION_MANAGER=local/kali:@/tmp/.ICE-unix/1100,unix/kali:/tmp/.ICE-unix/1100>
+Tue Sep 03 02:56:38 2024: env 14: <LOGNAME=kali>
+Tue Sep 03 02:56:38 2024: env 15: <PWD=/home/kali/CLionProjects/llm_generated_code_c>
+Tue Sep 03 02:56:38 2024: env 16: <LANGUAGE=>
+Tue Sep 03 02:56:38 2024: env 17: <WINDOWID=0>
+Tue Sep 03 02:56:38 2024: env 18: <SHELL=/usr/bin/zsh>
+Tue Sep 03 02:56:38 2024: env 19: <OLDPWD=/home/kali/CLionProjects/llm_generated_code_c>
+Tue Sep 03 02:56:38 2024: env 20: <POWERSHELL_UPDATECHECK=Off>
+Tue Sep 03 02:56:38 2024: env 21: <GTK_MODULES=gail:atk-bridge>
+Tue Sep 03 02:56:38 2024: env 22: <CLUTTER_IM_MODULE=ibus>
+Tue Sep 03 02:56:38 2024: env 23: <TERM_SESSION_ID=9c92459c-c42c-4f64-b067-3321ec7e4ed7>
+Tue Sep 03 02:56:38 2024: env 24: <XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0>
+Tue Sep 03 02:56:38 2024: env 25: <PANEL_GDK_CORE_DEVICE_EVENTS=0>
+Tue Sep 03 02:56:38 2024: env 26: <_JAVA_OPTIONS=-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true>
+Tue Sep 03 02:56:38 2024: env 27: <COLORFGBG=15;0>
+Tue Sep 03 02:56:38 2024: env 28: <LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.swp=00;90:*.tmp=00;90:*.dpkg-dist=00;90:*.dpkg-old=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90::ow=30;44:>
+Tue Sep 03 02:56:38 2024: env 29: <XDG_SESSION_DESKTOP=lightdm-xsession>
+Tue Sep 03 02:56:38 2024: env 30: <SHLVL=2>
+Tue Sep 03 02:56:38 2024: env 31: <LESS_TERMCAP_md=[1;36m>
+Tue Sep 03 02:56:38 2024: env 32: <LESS_TERMCAP_me=[0m>
+Tue Sep 03 02:56:38 2024: env 33: <LESS_TERMCAP_mb=[1;31m>
+Tue Sep 03 02:56:38 2024: env 34: <QT_IM_MODULE=ibus>
+Tue Sep 03 02:56:38 2024: env 35: <TERM=xterm-256color>
+Tue Sep 03 02:56:38 2024: env 36: <LESS_TERMCAP_us=[1;32m>
+Tue Sep 03 02:56:38 2024: env 37: <XDG_CONFIG_DIRS=/etc/xdg>
+Tue Sep 03 02:56:38 2024: env 38: <LANG=en_US.UTF-8>
+Tue Sep 03 02:56:38 2024: env 39: <XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0>
+Tue Sep 03 02:56:38 2024: env 40: <XDG_SESSION_ID=2>
+Tue Sep 03 02:56:38 2024: env 41: <XDG_SESSION_TYPE=x11>
+Tue Sep 03 02:56:38 2024: env 42: <DISPLAY=:0.0>
+Tue Sep 03 02:56:38 2024: env 43: <LESS_TERMCAP_ue=[0m>
+Tue Sep 03 02:56:38 2024: env 44: <XDG_SESSION_CLASS=user>
+Tue Sep 03 02:56:38 2024: env 45: <_=/home/kali/workingDirectory/programs/build-wrapper-linux-x86/build-wrapper-linux-x86-64>
+Tue Sep 03 02:56:38 2024: env 46: <XDG_GREETER_DATA_DIR=/var/lib/lightdm/data/kali>
+Tue Sep 03 02:56:38 2024: env 47: <DESKTOP_SESSION=lightdm-xsession>
+Tue Sep 03 02:56:38 2024: env 48: <USER=kali>
+Tue Sep 03 02:56:38 2024: env 49: <XDG_MENU_PREFIX=xfce->
+Tue Sep 03 02:56:38 2024: env 50: <QT_ACCESSIBILITY=1>
+Tue Sep 03 02:56:38 2024: env 51: <TERMINAL_EMULATOR=JetBrains-JediTerm>
+Tue Sep 03 02:56:38 2024: env 52: <SSH_AUTH_SOCK=/tmp/ssh-jov9PPLvdxHq/agent.1100>
+Tue Sep 03 02:56:38 2024: env 53: <XDG_SEAT=seat0>
+Tue Sep 03 02:56:38 2024: env 54: <DOTNET_CLI_TELEMETRY_OPTOUT=1>
+Tue Sep 03 02:56:38 2024: env 55: <QT_QPA_PLATFORMTHEME=qt5ct>
+Tue Sep 03 02:56:38 2024: env 56: <COMMAND_NOT_FOUND_INSTALL_PROMPT=1>
+Tue Sep 03 02:56:38 2024: env 57: <POWERSHELL_TELEMETRY_OPTOUT=1>
+Tue Sep 03 02:56:38 2024: env 58: <XDG_VTNR=7>
+Tue Sep 03 02:56:38 2024: env 59: <XDG_RUNTIME_DIR=/run/user/1000>
+Tue Sep 03 02:56:38 2024: env 60: <HOME=/home/kali>
+Tue Sep 03 02:56:38 2024: executing: <cmake --build cmake-build-debug>
+Tue Sep 03 02:56:38 2024: initializing json file
+Tue Sep 03 02:56:38 2024: process created with pid: 7052
+Tue Sep 03 02:56:38 2024: parent pid: 7051
+Tue Sep 03 02:56:38 2024: working directory: </home/kali/CLionProjects/llm_generated_code_c>
+Tue Sep 03 02:56:38 2024: executable: </home/kali/workingDirectory/programs/build-wrapper-linux-x86/build-wrapper-linux-x86-64>
+Tue Sep 03 02:56:38 2024: argv[0]: <build-wrapper-linux-x86-64>
+Tue Sep 03 02:56:38 2024: argv[1]: <-c>
+Tue Sep 03 02:56:38 2024: argv[2]: <cmake>
+Tue Sep 03 02:56:38 2024: argv[3]: <--build>
+Tue Sep 03 02:56:38 2024: argv[4]: <cmake-build-debug>
+Tue Sep 03 02:56:38 2024: skipping process with pid: 7052
+Tue Sep 03 02:56:38 2024: process created with pid: 7053
+Tue Sep 03 02:56:38 2024: parent pid: 7052
+Tue Sep 03 02:56:38 2024: working directory: </home/kali/CLionProjects/llm_generated_code_c>
+Tue Sep 03 02:56:38 2024: executable: </home/kali/workingDirectory/programs/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake>
+Tue Sep 03 02:56:38 2024: argv[0]: <cmake>
+Tue Sep 03 02:56:38 2024: argv[1]: <--build>
+Tue Sep 03 02:56:38 2024: argv[2]: <cmake-build-debug>
+Tue Sep 03 02:56:38 2024: skipping process with pid: 7053
+Tue Sep 03 02:56:38 2024: process created with pid: 7054
+Tue Sep 03 02:56:38 2024: parent pid: 7053
+Tue Sep 03 02:56:38 2024: working directory: </home/kali/CLionProjects/llm_generated_code_c/cmake-build-debug>
+Tue Sep 03 02:56:38 2024: executable: </home/kali/workingDirectory/programs/clion-2024.1.4/bin/ninja/linux/x64/ninja>
+Tue Sep 03 02:56:38 2024: argv[0]: </home/kali/workingDirectory/programs/clion-2024.1.4/bin/ninja/linux/x64/ninja>
+Tue Sep 03 02:56:38 2024: skipping process with pid: 7054
+Tue Sep 03 02:56:38 2024: process created with pid: 7055
+Tue Sep 03 02:56:38 2024: parent pid: 7054
+Tue Sep 03 02:56:38 2024: working directory: </home/kali/CLionProjects/llm_generated_code_c/cmake-build-debug>
+Tue Sep 03 02:56:38 2024: executable: </usr/bin/dash>
+Tue Sep 03 02:56:38 2024: argv[0]: </bin/sh>
+Tue Sep 03 02:56:38 2024: argv[1]: <-c>
+Tue Sep 03 02:56:38 2024: argv[2]: </home/kali/workingDirectory/programs/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/kali/CLionProjects/llm_generated_code_c -B/home/kali/CLionProjects/llm_generated_code_c/cmake-build-debug>
+Tue Sep 03 02:56:38 2024: skipping process with pid: 7055
+Tue Sep 03 02:56:38 2024: process created with pid: 7056
+Tue Sep 03 02:56:38 2024: parent pid: 7055
+Tue Sep 03 02:56:38 2024: working directory: </home/kali/CLionProjects/llm_generated_code_c/cmake-build-debug>
+Tue Sep 03 02:56:38 2024: executable: </home/kali/workingDirectory/programs/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake>
+Tue Sep 03 02:56:38 2024: argv[0]: </home/kali/workingDirectory/programs/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake>
+Tue Sep 03 02:56:38 2024: argv[1]: <--regenerate-during-build>
+Tue Sep 03 02:56:38 2024: argv[2]: <-S/home/kali/CLionProjects/llm_generated_code_c>
+Tue Sep 03 02:56:38 2024: argv[3]: <-B/home/kali/CLionProjects/llm_generated_code_c/cmake-build-debug>
+Tue Sep 03 02:56:38 2024: skipping process with pid: 7056
+Tue Sep 03 02:56:38 2024: process created with pid: 7057
+Tue Sep 03 02:56:38 2024: parent pid: 7056
+Tue Sep 03 02:56:38 2024: working directory: </home/kali/CLionProjects/llm_generated_code_c/cmake-build-debug>
+Tue Sep 03 02:56:38 2024: executable: </home/kali/workingDirectory/programs/clion-2024.1.4/bin/ninja/linux/x64/ninja>
+Tue Sep 03 02:56:38 2024: argv[0]: </home/kali/workingDirectory/programs/clion-2024.1.4/bin/ninja/linux/x64/ninja>
+Tue Sep 03 02:56:38 2024: argv[1]: <--version>
+Tue Sep 03 02:56:38 2024: skipping process with pid: 7057
+Tue Sep 03 02:56:39 2024: process created with pid: 7058
+Tue Sep 03 02:56:39 2024: parent pid: 7056
+Tue Sep 03 02:56:39 2024: working directory: </home/kali/CLionProjects/llm_generated_code_c/cmake-build-debug>
+Tue Sep 03 02:56:39 2024: executable: </home/kali/workingDirectory/programs/clion-2024.1.4/bin/ninja/linux/x64/ninja>
+Tue Sep 03 02:56:39 2024: argv[0]: </home/kali/workingDirectory/programs/clion-2024.1.4/bin/ninja/linux/x64/ninja>
+Tue Sep 03 02:56:39 2024: argv[1]: <-C>
+Tue Sep 03 02:56:39 2024: argv[2]: </home/kali/CLionProjects/llm_generated_code_c/cmake-build-debug>
+Tue Sep 03 02:56:39 2024: argv[3]: <-t>
+Tue Sep 03 02:56:39 2024: argv[4]: <restat>
+Tue Sep 03 02:56:39 2024: argv[5]: <build.ninja>
+Tue Sep 03 02:56:39 2024: skipping process with pid: 7058
+Tue Sep 03 02:56:40 2024: process created with pid: 7059
+Tue Sep 03 02:56:40 2024: parent pid: 7054
+Tue Sep 03 02:56:40 2024: working directory: </home/kali/CLionProjects/llm_generated_code_c/cmake-build-debug>
+Tue Sep 03 02:56:40 2024: executable: </usr/bin/dash>
+Tue Sep 03 02:56:40 2024: argv[0]: </bin/sh>
+Tue Sep 03 02:56:40 2024: argv[1]: <-c>
+Tue Sep 03 02:56:40 2024: argv[2]: </usr/bin/cc  -I/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/include -I/home/kali/workingDirectory/programs/clion-2024.1.4/jbr/include/linux -I/home/kali/workingDirectory/programs/clion-2024.1.4/jbr/include -g -std=gnu17 -fdiagnostics-color=always -MD -MT CMakeFiles/task948.dir/source/output/codestral/c/Task105_MISTRAL_codestral-latest.c.o -MF CMakeFiles/task948.dir/source/output/codestral/c/Task105_MISTRAL_codestral-latest.c.o.d -o CMakeFiles/task948.dir/source/output/codestral/c/Task105_MISTRAL_codestral-latest.c.o -c /home/kali/CLionProjects/llm_generated_code_c/source/output/codestral/c/Task105_MISTRAL_codestral-latest.c>
+Tue Sep 03 02:56:40 2024: skipping process with pid: 7059
+Tue Sep 03 02:56:40 2024: process created with pid: 7060
+Tue Sep 03 02:56:40 2024: parent pid: 7059
+Tue Sep 03 02:56:40 2024: working directory: </home/kali/CLionProjects/llm_generated_code_c/cmake-build-debug>
+Tue Sep 03 02:56:40 2024: executable: </usr/bin/x86_64-linux-gnu-gcc-13>
+Tue Sep 03 02:56:40 2024: argv[0]: </usr/bin/cc>
+Tue Sep 03 02:56:40 2024: argv[1]: <-I/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/include>
+Tue Sep 03 02:56:40 2024: argv[2]: <-I/home/kali/workingDirectory/programs/clion-2024.1.4/jbr/include/linux>
+Tue Sep 03 02:56:40 2024: argv[3]: <-I/home/kali/workingDirectory/programs/clion-2024.1.4/jbr/include>
+Tue Sep 03 02:56:40 2024: argv[4]: <-g>
+Tue Sep 03 02:56:40 2024: argv[5]: <-std=gnu17>
+Tue Sep 03 02:56:40 2024: argv[6]: <-fdiagnostics-color=always>
+Tue Sep 03 02:56:40 2024: argv[7]: <-MD>
+Tue Sep 03 02:56:40 2024: argv[8]: <-MT>
+Tue Sep 03 02:56:40 2024: argv[9]: <CMakeFiles/task948.dir/source/output/codestral/c/Task105_MISTRAL_codestral-latest.c.o>
+Tue Sep 03 02:56:40 2024: argv[10]: <-MF>
+Tue Sep 03 02:56:40 2024: argv[11]: <CMakeFiles/task948.dir/source/output/codestral/c/Task105_MISTRAL_codestral-latest.c.o.d>
+Tue Sep 03 02:56:40 2024: argv[12]: <-o>
+Tue Sep 03 02:56:40 2024: argv[13]: <CMakeFiles/task948.dir/source/output/codestral/c/Task105_MISTRAL_codestral-latest.c.o>
+Tue Sep 03 02:56:40 2024: argv[14]: <-c>
+Tue Sep 03 02:56:40 2024: argv[15]: </home/kali/CLionProjects/llm_generated_code_c/source/output/codestral/c/Task105_MISTRAL_codestral-latest.c>
+Tue Sep 03 02:56:40 2024: envp[0]: <SONAR_CFAMILY_WRAPPER_SOCKET=/tmp/build-wrapper-socket.eHuvPp>
+Tue Sep 03 02:56:40 2024: envp[1]: <SONAR_CFAMILY_WRAPPER_LIBRARY=/home/kali/workingDirectory/programs/build-wrapper-linux-x86/libinterceptor-${PLATFORM}.so>
+Tue Sep 03 02:56:40 2024: envp[2]: <SONAR_CFAMILY_BUILD_WRAPPER_BIN=/home/kali/workingDirectory/programs/build-wrapper-linux-x86/build-wrapper-linux-x86-64>
+Tue Sep 03 02:56:40 2024: envp[3]: <LESS_TERMCAP_se=[0m>
+Tue Sep 03 02:56:40 2024: envp[4]: <TERM_SESSION_ID=9c92459c-c42c-4f64-b067-3321ec7e4ed7>
+Tue Sep 03 02:56:40 2024: envp[5]: <POWERSHELL_TELEMETRY_OPTOUT=1>
+Tue Sep 03 02:56:40 2024: envp[6]: <LANGUAGE=>
+Tue Sep 03 02:56:40 2024: envp[7]: <LESS_TERMCAP_ue=[0m>
+Tue Sep 03 02:56:40 2024: envp[8]: <USER=kali>
+Tue Sep 03 02:56:40 2024: envp[9]: <XDG_SEAT=seat0>
+Tue Sep 03 02:56:40 2024: envp[10]: <SSH_AGENT_PID=1171>
+Tue Sep 03 02:56:40 2024: envp[11]: <XDG_SESSION_TYPE=x11>
+Tue Sep 03 02:56:40 2024: envp[12]: <DOTNET_CLI_TELEMETRY_OPTOUT=1>
+Tue Sep 03 02:56:40 2024: envp[13]: <SHLVL=2>
+Tue Sep 03 02:56:40 2024: envp[14]: <OLDPWD=/home/kali/CLionProjects/llm_generated_code_c>
+Tue Sep 03 02:56:40 2024: envp[15]: <HOME=/home/kali>
+Tue Sep 03 02:56:40 2024: envp[16]: <DESKTOP_SESSION=lightdm-xsession>
+Tue Sep 03 02:56:40 2024: envp[17]: <PANEL_GDK_CORE_DEVICE_EVENTS=0>
+Tue Sep 03 02:56:40 2024: envp[18]: <TERMINAL_EMULATOR=JetBrains-JediTerm>
+Tue Sep 03 02:56:40 2024: envp[19]: <GTK_MODULES=gail:atk-bridge>
+Tue Sep 03 02:56:40 2024: envp[20]: <XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0>
+Tue Sep 03 02:56:40 2024: envp[21]: <LESS_TERMCAP_so=[01;33m>
+Tue Sep 03 02:56:40 2024: envp[22]: <DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus>
+Tue Sep 03 02:56:40 2024: envp[23]: <COLORTERM=truecolor>
+Tue Sep 03 02:56:40 2024: envp[24]: <COMMAND_NOT_FOUND_INSTALL_PROMPT=1>
+Tue Sep 03 02:56:40 2024: envp[25]: <QT_QPA_PLATFORMTHEME=qt5ct>
+Tue Sep 03 02:56:40 2024: envp[26]: <GTK_IM_MODULE=ibus>
+Tue Sep 03 02:56:40 2024: envp[27]: <LOGNAME=kali>
+Tue Sep 03 02:56:40 2024: envp[28]: <QT_AUTO_SCREEN_SCALE_FACTOR=0>
+Tue Sep 03 02:56:40 2024: envp[29]: <WINDOWID=0>
+Tue Sep 03 02:56:40 2024: envp[30]: <LESS_TERMCAP_us=[1;32m>
+Tue Sep 03 02:56:40 2024: envp[31]: <_=/home/kali/workingDirectory/programs/build-wrapper-linux-x86/build-wrapper-linux-x86-64>
+Tue Sep 03 02:56:40 2024: envp[32]: <COLORFGBG=15;0>
+Tue Sep 03 02:56:40 2024: envp[33]: <XDG_SESSION_CLASS=user>
+Tue Sep 03 02:56:40 2024: envp[34]: <TERM=xterm-256color>
+Tue Sep 03 02:56:40 2024: envp[35]: <XDG_SESSION_ID=2>
+Tue Sep 03 02:56:40 2024: envp[36]: <PATH=/home/kali/workingDirectory/programs/clion-2024.1.4/bin/cmake/linux/x64/bin:/home/kali/workingDirectory/programs/build-wrapper-linux-x86:/home/kali/workingDirectory/programs/sonar-scanner-6.1.0.4477-linux-x64/bin:/home/kali:/home/kali/workingDirectory/programs/clion-2024.1.4/bin:/home/kali/workingDirectory/programs/clion-2024.1.4/bin/cmake/linux/x64/bin:/home/kali/workingDirectory/programs/clion-2024.1.4/bin/ninja/linux/x64/:/home/kali/.local/bin:/home/kali/workingDirectory/programs/clion-2024.1.4/bin/cmake/linux/x64/bin:/home/kali/workingDirectory/programs/build-wrapper-linux-x86:/home/kali/workingDirectory/programs/sonar-scanner-6.1.0.4477-linux-x64/bin:/home/kali:/home/kali/workingDirectory/programs/clion-2024.1.4/bin:/home/kali/workingDirectory/programs/clion-2024.1.4/bin/cmake/linux/x64/bin:/home/kali/workingDirectory/programs/clion-2024.1.4/bin/ninja/linux/x64/:/home/kali/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games>
+Tue Sep 03 02:56:40 2024: envp[37]: <SESSION_MANAGER=local/kali:@/tmp/.ICE-unix/1100,unix/kali:/tmp/.ICE-unix/1100>
+Tue Sep 03 02:56:40 2024: envp[38]: <_JAVA_OPTIONS=-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true>
+Tue Sep 03 02:56:40 2024: envp[39]: <XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0>
+Tue Sep 03 02:56:40 2024: envp[40]: <XDG_MENU_PREFIX=xfce->
+Tue Sep 03 02:56:40 2024: envp[41]: <XDG_RUNTIME_DIR=/run/user/1000>
+Tue Sep 03 02:56:40 2024: envp[42]: <DISPLAY=:0.0>
+Tue Sep 03 02:56:40 2024: envp[43]: <XDG_CURRENT_DESKTOP=XFCE>
+Tue Sep 03 02:56:40 2024: envp[44]: <POWERSHELL_UPDATECHECK=Off>
+Tue Sep 03 02:56:40 2024: envp[45]: <LANG=en_US.UTF-8>
+Tue Sep 03 02:56:40 2024: envp[46]: <XAUTHORITY=/home/kali/.Xauthority>
+Tue Sep 03 02:56:40 2024: envp[47]: <XMODIFIERS=@im=ibus>
+Tue Sep 03 02:56:40 2024: envp[48]: <LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.swp=00;90:*.tmp=00;90:*.dpkg-dist=00;90:*.dpkg-old=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90::ow=30;44:>
+Tue Sep 03 02:56:40 2024: envp[49]: <XDG_SESSION_DESKTOP=lightdm-xsession>
+Tue Sep 03 02:56:40 2024: envp[50]: <XDG_GREETER_DATA_DIR=/var/lib/lightdm/data/kali>
+Tue Sep 03 02:56:40 2024: envp[51]: <SSH_AUTH_SOCK=/tmp/ssh-jov9PPLvdxHq/agent.1100>
+Tue Sep 03 02:56:40 2024: envp[52]: <SHELL=/usr/bin/zsh>
+Tue Sep 03 02:56:40 2024: envp[53]: <GDMSESSION=lightdm-xsession>
+Tue Sep 03 02:56:40 2024: envp[54]: <QT_ACCESSIBILITY=1>
+Tue Sep 03 02:56:40 2024: envp[55]: <LESS_TERMCAP_mb=[1;31m>
+Tue Sep 03 02:56:40 2024: envp[56]: <LESS_TERMCAP_md=[1;36m>
+Tue Sep 03 02:56:40 2024: envp[57]: <QT_IM_MODULE=ibus>
+Tue Sep 03 02:56:40 2024: envp[58]: <XDG_VTNR=7>
+Tue Sep 03 02:56:40 2024: envp[59]: <PWD=/home/kali/CLionProjects/llm_generated_code_c/cmake-build-debug>
+Tue Sep 03 02:56:40 2024: envp[60]: <LESS_TERMCAP_me=[0m>
+Tue Sep 03 02:56:40 2024: envp[61]: <XDG_DATA_DIRS=/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share>
+Tue Sep 03 02:56:40 2024: envp[62]: <CLUTTER_IM_MODULE=ibus>
+Tue Sep 03 02:56:40 2024: envp[63]: <XDG_CONFIG_DIRS=/etc/xdg>
+Tue Sep 03 02:56:40 2024: envp[64]: <LD_PRELOAD=>
+Tue Sep 03 02:56:40 2024: candidate file: </home/kali/CLionProjects/llm_generated_code_c/source/output/codestral/c/Task105_MISTRAL_codestral-latest.c>
+Tue Sep 03 02:56:40 2024: process created with pid: 7061
+Tue Sep 03 02:56:40 2024: parent pid: 7060
+Tue Sep 03 02:56:40 2024: working directory: </home/kali/CLionProjects/llm_generated_code_c/cmake-build-debug>
+Tue Sep 03 02:56:40 2024: executable: </usr/libexec/gcc/x86_64-linux-gnu/13/cc1>
+Tue Sep 03 02:56:40 2024: argv[0]: </usr/libexec/gcc/x86_64-linux-gnu/13/cc1>
+Tue Sep 03 02:56:40 2024: argv[1]: <-quiet>
+Tue Sep 03 02:56:40 2024: argv[2]: <-I>
+Tue Sep 03 02:56:40 2024: argv[3]: </home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/include>
+Tue Sep 03 02:56:40 2024: argv[4]: <-I>
+Tue Sep 03 02:56:40 2024: argv[5]: </home/kali/workingDirectory/programs/clion-2024.1.4/jbr/include/linux>
+Tue Sep 03 02:56:40 2024: argv[6]: <-I>
+Tue Sep 03 02:56:40 2024: argv[7]: </home/kali/workingDirectory/programs/clion-2024.1.4/jbr/include>
+Tue Sep 03 02:56:40 2024: argv[8]: <-imultiarch>
+Tue Sep 03 02:56:40 2024: argv[9]: <x86_64-linux-gnu>
+Tue Sep 03 02:56:40 2024: argv[10]: <-MD>
+Tue Sep 03 02:56:40 2024: argv[11]: <CMakeFiles/task948.dir/source/output/codestral/c/Task105_MISTRAL_codestral-latest.c.d>
+Tue Sep 03 02:56:40 2024: argv[12]: <-MF>
+Tue Sep 03 02:56:40 2024: argv[13]: <CMakeFiles/task948.dir/source/output/codestral/c/Task105_MISTRAL_codestral-latest.c.o.d>
+Tue Sep 03 02:56:40 2024: argv[14]: <-MT>
+Tue Sep 03 02:56:40 2024: argv[15]: <CMakeFiles/task948.dir/source/output/codestral/c/Task105_MISTRAL_codestral-latest.c.o>
+Tue Sep 03 02:56:40 2024: argv[16]: </home/kali/CLionProjects/llm_generated_code_c/source/output/codestral/c/Task105_MISTRAL_codestral-latest.c>
+Tue Sep 03 02:56:40 2024: argv[17]: <-quiet>
+Tue Sep 03 02:56:40 2024: argv[18]: <-dumpdir>
+Tue Sep 03 02:56:40 2024: argv[19]: <CMakeFiles/task948.dir/source/output/codestral/c/>
+Tue Sep 03 02:56:40 2024: argv[20]: <-dumpbase>
+Tue Sep 03 02:56:40 2024: argv[21]: <Task105_MISTRAL_codestral-latest.c.c>
+Tue Sep 03 02:56:40 2024: argv[22]: <-dumpbase-ext>
+Tue Sep 03 02:56:40 2024: argv[23]: <.c>
+Tue Sep 03 02:56:40 2024: argv[24]: <-mtune=generic>
+Tue Sep 03 02:56:40 2024: argv[25]: <-march=x86-64>
+Tue Sep 03 02:56:40 2024: argv[26]: <-g>
+Tue Sep 03 02:56:40 2024: argv[27]: <-std=gnu17>
+Tue Sep 03 02:56:40 2024: argv[28]: <-fdiagnostics-color=always>
+Tue Sep 03 02:56:40 2024: argv[29]: <-fasynchronous-unwind-tables>
+Tue Sep 03 02:56:40 2024: argv[30]: <-o>
+Tue Sep 03 02:56:40 2024: argv[31]: </tmp/ccOnQC93.s>
+Tue Sep 03 02:56:40 2024: skipping process with pid: 7061
+Tue Sep 03 02:56:40 2024: process created with pid: 7062
+Tue Sep 03 02:56:40 2024: parent pid: 7060
+Tue Sep 03 02:56:40 2024: working directory: </home/kali/CLionProjects/llm_generated_code_c/cmake-build-debug>
+Tue Sep 03 02:56:40 2024: executable: </usr/bin/x86_64-linux-gnu-as>
+Tue Sep 03 02:56:40 2024: argv[0]: <as>
+Tue Sep 03 02:56:40 2024: argv[1]: <-I>
+Tue Sep 03 02:56:40 2024: argv[2]: </home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/include>
+Tue Sep 03 02:56:40 2024: argv[3]: <-I>
+Tue Sep 03 02:56:40 2024: argv[4]: </home/kali/workingDirectory/programs/clion-2024.1.4/jbr/include/linux>
+Tue Sep 03 02:56:40 2024: argv[5]: <-I>
+Tue Sep 03 02:56:40 2024: argv[6]: </home/kali/workingDirectory/programs/clion-2024.1.4/jbr/include>
+Tue Sep 03 02:56:40 2024: argv[7]: <--gdwarf-5>
+Tue Sep 03 02:56:40 2024: argv[8]: <--64>
+Tue Sep 03 02:56:40 2024: argv[9]: <-o>
+Tue Sep 03 02:56:40 2024: argv[10]: <CMakeFiles/task948.dir/source/output/codestral/c/Task105_MISTRAL_codestral-latest.c.o>
+Tue Sep 03 02:56:40 2024: argv[11]: </tmp/ccOnQC93.s>
+Tue Sep 03 02:56:40 2024: skipping process with pid: 7062
+Tue Sep 03 02:56:40 2024: process created with pid: 7063
+Tue Sep 03 02:56:40 2024: parent pid: 7054
+Tue Sep 03 02:56:40 2024: working directory: </home/kali/CLionProjects/llm_generated_code_c/cmake-build-debug>
+Tue Sep 03 02:56:40 2024: executable: </usr/bin/dash>
+Tue Sep 03 02:56:40 2024: argv[0]: </bin/sh>
+Tue Sep 03 02:56:40 2024: argv[1]: <-c>
+Tue Sep 03 02:56:40 2024: argv[2]: <: && /home/kali/workingDirectory/programs/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake -E rm -f libtask948.a && /usr/bin/ar qc libtask948.a  CMakeFiles/task948.dir/source/output/codestral/c/Task105_MISTRAL_codestral-latest.c.o && /usr/bin/ranlib libtask948.a && :>
+Tue Sep 03 02:56:40 2024: skipping process with pid: 7063
+Tue Sep 03 02:56:40 2024: process created with pid: 7064
+Tue Sep 03 02:56:40 2024: parent pid: 7063
+Tue Sep 03 02:56:40 2024: working directory: </home/kali/CLionProjects/llm_generated_code_c/cmake-build-debug>
+Tue Sep 03 02:56:40 2024: executable: </home/kali/workingDirectory/programs/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake>
+Tue Sep 03 02:56:40 2024: argv[0]: </home/kali/workingDirectory/programs/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake>
+Tue Sep 03 02:56:40 2024: argv[1]: <-E>
+Tue Sep 03 02:56:40 2024: argv[2]: <rm>
+Tue Sep 03 02:56:40 2024: argv[3]: <-f>
+Tue Sep 03 02:56:40 2024: argv[4]: <libtask948.a>
+Tue Sep 03 02:56:40 2024: skipping process with pid: 7064
+Tue Sep 03 02:56:40 2024: process created with pid: 7065
+Tue Sep 03 02:56:40 2024: parent pid: 7063
+Tue Sep 03 02:56:40 2024: working directory: </home/kali/CLionProjects/llm_generated_code_c/cmake-build-debug>
+Tue Sep 03 02:56:40 2024: executable: </usr/bin/x86_64-linux-gnu-ar>
+Tue Sep 03 02:56:40 2024: argv[0]: </usr/bin/ar>
+Tue Sep 03 02:56:40 2024: argv[1]: <qc>
+Tue Sep 03 02:56:40 2024: argv[2]: <libtask948.a>
+Tue Sep 03 02:56:40 2024: argv[3]: <CMakeFiles/task948.dir/source/output/codestral/c/Task105_MISTRAL_codestral-latest.c.o>
+Tue Sep 03 02:56:40 2024: skipping process with pid: 7065
+Tue Sep 03 02:56:40 2024: process created with pid: 7066
+Tue Sep 03 02:56:40 2024: parent pid: 7063
+Tue Sep 03 02:56:40 2024: working directory: </home/kali/CLionProjects/llm_generated_code_c/cmake-build-debug>
+Tue Sep 03 02:56:40 2024: executable: </usr/bin/x86_64-linux-gnu-ranlib>
+Tue Sep 03 02:56:40 2024: argv[0]: </usr/bin/ranlib>
+Tue Sep 03 02:56:40 2024: argv[1]: <libtask948.a>
+Tue Sep 03 02:56:40 2024: skipping process with pid: 7066
+Tue Sep 03 02:56:40 2024: finalizing json file
+Tue Sep 03 02:56:40 2024: returned with code: 0

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+    <book id="1">
+        <title>Effective Java</title>
+        <author>Joshua Bloch</author>
+        <year>2018</year>
+        <publisher>Addison-Wesley</publisher>
+    </book>
+    <book id="2">
+        <title>Clean Code</title>
+        <author>Robert C. Martin</author>
+        <year>2008</year>
+        <publisher>Prentice Hall</publisher>
+    </book>
+    <book id="3">
+        <title>The Pragmatic Programmer</title>
+        <author>Andrew Hunt</author>
+        <author>David Thomas</author>
+        <year>1999</year>
+        <publisher>Addison-Wesley</publisher>
+    </book>
+</library>

@@ -1,0 +1,8 @@
+Processing file: /home/kali/CLionProjects/llm_generated_code_c/tests/codestral/Task119_Test/tc4.csv
+Date Amount
+ 
+2024-01-01 100
+ 
+2024-01-02 150
+ 
+2024-01-03 200 

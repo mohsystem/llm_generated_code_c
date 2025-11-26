@@ -9,7 +9,7 @@ char* expanded_form(int num) {
     int len = strlen(numStr);
     
     char* result = malloc(100 * sizeof(char));
-    result[0] = '\\0';
+    result[0] = '\0';
     
     for (int i = 0; i < len; i++) {
         if (numStr[i] != '0') {
@@ -27,10 +27,10 @@ char* expanded_form(int num) {
     
     return result;
 }
-
-int main() {
-    printf("%s\\n", expanded_form(12));    // Output: 10 + 2
-    printf("%s\\n", expanded_form(42));    // Output: 40 + 2
-    printf("%s\\n", expanded_form(70304)); // Output: 70000 + 300 + 4
-    return 0;
-}
+//
+// int main() {
+//     printf("%s\\n", expanded_form(12));    // Output: 10 + 2
+//     printf("%s\\n", expanded_form(42));    // Output: 40 + 2
+//     printf("%s\\n", expanded_form(70304)); // Output: 70000 + 300 + 4
+//     return 0;
+// }

@@ -1,0 +1,6 @@
+1. This is a valid line.
+Hello world.
+2 This is another valid line.
+3. Yet another valid line.
+Some random text.
+4. Line with a number and a dot.

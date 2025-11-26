@@ -1,0 +1,11 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/task335.dir/source/output/llama-3/c/Task79_PERPLEXITY_llama-3-sonar-large-32k-chat.c.o"
+  "CMakeFiles/task335.dir/source/output/llama-3/c/Task79_PERPLEXITY_llama-3-sonar-large-32k-chat.c.o.d"
+  "libtask335.a"
+  "libtask335.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/task335.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

@@ -1,0 +1,8 @@
+Processing file: /home/kali/CLionProjects/llm_generated_code_c/tests/codestral/Task119_Test/tc6.csv
+Title Author Year
+ 
+The Great Gatsby F. Scott Fitzgerald 1925
+ 
+To Kill a Mockingbird Harper Lee 1960
+ 
+1984 George Orwell 1949 

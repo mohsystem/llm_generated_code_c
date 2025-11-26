@@ -21,13 +21,13 @@ int findOutlier(int* arr, int size) {
 
     return evenCount == 1 ? evenNum : oddNum;
 }
-
-int main() {
-    int arr1[] = {2, 4, 0, 100, 4, 11, 2602, 36};
-    int arr2[] = {160, 3, 1719, 19, 11, 13, -21};
-
-    printf("%d\\n", findOutlier(arr1, sizeof(arr1) / sizeof(arr1[0])));  // Output: 11
-    printf("%d\\n", findOutlier(arr2, sizeof(arr2) / sizeof(arr2[0])));  // Output: 160
-
-    return 0;
-}
+//
+// int main() {
+//     int arr1[] = {2, 4, 0, 100, 4, 11, 2602, 36};
+//     int arr2[] = {160, 3, 1719, 19, 11, 13, -21};
+//
+//     printf("%d\\n", findOutlier(arr1, sizeof(arr1) / sizeof(arr1[0])));  // Output: 11
+//     printf("%d\\n", findOutlier(arr2, sizeof(arr2) / sizeof(arr2[0])));  // Output: 160
+//
+//     return 0;
+// }

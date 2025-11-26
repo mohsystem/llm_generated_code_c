@@ -17,25 +17,25 @@ char** towerBuilder(int nFloors) {
     }
     return tower;
 }
-
-int main() {
-    int nFloors = 3;
-    char** tower = towerBuilder(nFloors);
-    for (int i = 0; i < nFloors; i++) {
-        printf("%s\\n", tower[i]);
-        free(tower[i]);
-    }
-    free(tower);
-
-    printf("\\n");
-
-    nFloors = 6;
-    tower = towerBuilder(nFloors);
-    for (int i = 0; i < nFloors; i++) {
-        printf("%s\\n", tower[i]);
-        free(tower[i]);
-    }
-    free(tower);
-
-    return 0;
-}
+//
+// int main() {
+//     int nFloors = 3;
+//     char** tower = towerBuilder(nFloors);
+//     for (int i = 0; i < nFloors; i++) {
+//         printf("%s\\n", tower[i]);
+//         free(tower[i]);
+//     }
+//     free(tower);
+//
+//     printf("\\n");
+//
+//     nFloors = 6;
+//     tower = towerBuilder(nFloors);
+//     for (int i = 0; i < nFloors; i++) {
+//         printf("%s\\n", tower[i]);
+//         free(tower[i]);
+//     }
+//     free(tower);
+//
+//     return 0;
+// }

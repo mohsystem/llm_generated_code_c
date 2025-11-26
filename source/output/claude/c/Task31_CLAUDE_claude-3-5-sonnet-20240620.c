@@ -14,6 +14,6 @@ char *dna_strand(const char *dna)
             case 'G': result[i] = 'C'; break;
         }
     }
-    result[len] = '\\0';
+    result[len] = '\0';
     return result;
 }

@@ -1,0 +1,6 @@
+Hello, this is a sample file.
+We are testing regular expressions.
+The quick brown fox jumps over the lazy dog.
+
+Regular expressions are powerful tools for text processing.
+Let's see if our pattern matches any of these lines.

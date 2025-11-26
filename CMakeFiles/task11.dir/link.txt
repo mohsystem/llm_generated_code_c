@@ -1,0 +1,1 @@
+/usr/bin/cc "CMakeFiles/task11.dir/source/output/gpt4o/c/Task87_OPENAI_gpt-4o.c.o" -o task11 

@@ -1,0 +1,2 @@
+File '/home/kali/CLionProjects/llm_generated_code_c/tests/claude/Task121_Test/large_file.txt' uploaded successfully.
+File size: 17 bytes

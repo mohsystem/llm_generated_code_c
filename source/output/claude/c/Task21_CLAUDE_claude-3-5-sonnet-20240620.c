@@ -19,9 +19,13 @@ int* remove_smallest(const int* numbers, int length, int* new_length) {
     for (int i = 0; i < length; i++) {
         if (i != min_index) {
             result[j++] = numbers[i];
+            //printf("%d", numbers[i]);
+
         }
     }
     
     *new_length = length - 1;
+    printf("result%d", result);
+
     return result;
 }

@@ -16,7 +16,7 @@ char* longest(const char* s1, const char* s2) {
     }
 
     result = (char*)malloc(len + 1);
-    result[len] = '\\0';
+    result[len] = '\0';
 
     for (i = 0; i < 26; i++) {
         if (counts[i]) {
@@ -28,7 +28,7 @@ char* longest(const char* s1, const char* s2) {
 }
 
 int main() {
-    printf("%s\\n", longest("xyaabbbccccdefww", "xxxxyyyyabklmopq"));
-    printf("%s\\n", longest("abcdefghijklmnopqrstuvwxyz", "abcdefghijklmnopqrstuvwxyz"));
+    printf("%s\n", longest("xyaabbbccccdefww", "xxxxyyyyabklmopq"));
+    printf("%s\n", longest("abcdefghijklmnopqrstuvwxyz", "abcdefghijklmnopqrstuvwxyz"));
     return 0;
 }

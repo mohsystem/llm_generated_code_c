@@ -45,12 +45,12 @@ int main() {
     char password[MAX_PASSWORD_LENGTH];
     printf("Enter the admin password: ");
     fgets(password, sizeof(password), stdin);
-    password[strcspn(password, "\\n")] = 0; // Remove newline
+    password[strcspn(password, "\n")] = 0; // Remove newline
 
     if (isValidAdminPassword(password)) {
-        printf("Password is valid\\n");
+        printf("Password is valid\n");
     } else {
-        printf("Password is invalid\\n");
+        printf("Password is invalid\n");
     }
 
     return 0;

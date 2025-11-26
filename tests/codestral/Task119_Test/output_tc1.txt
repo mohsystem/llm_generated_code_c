@@ -1,0 +1,8 @@
+Processing file: /home/kali/CLionProjects/llm_generated_code_c/tests/codestral/Task119_Test/tc1.csv
+Name Age Occupation
+ 
+Alice 30 Engineer
+ 
+Bob 25 Designer
+ 
+Charlie 35 Teacher 

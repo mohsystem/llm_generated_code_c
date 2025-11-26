@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtask181.a "CMakeFiles/task181.dir/source/output/gpt4o/c/Task12_OPENAI_gpt-4o.c.o"
+/usr/bin/ranlib libtask181.a

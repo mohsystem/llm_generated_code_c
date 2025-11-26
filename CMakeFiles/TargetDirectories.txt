@@ -1,0 +1,16 @@
+/home/kali/CLionProjects/llm_generated_code_c/CMakeFiles/llm_generated_code_c.dir
+/home/kali/CLionProjects/llm_generated_code_c/CMakeFiles/task2.dir
+/home/kali/CLionProjects/llm_generated_code_c/CMakeFiles/task3.dir
+/home/kali/CLionProjects/llm_generated_code_c/CMakeFiles/task4.dir
+/home/kali/CLionProjects/llm_generated_code_c/CMakeFiles/task7.dir
+/home/kali/CLionProjects/llm_generated_code_c/CMakeFiles/task8.dir
+/home/kali/CLionProjects/llm_generated_code_c/CMakeFiles/task9.dir
+/home/kali/CLionProjects/llm_generated_code_c/CMakeFiles/task10.dir
+/home/kali/CLionProjects/llm_generated_code_c/CMakeFiles/task11.dir
+/home/kali/CLionProjects/llm_generated_code_c/CMakeFiles/task12.dir
+/home/kali/CLionProjects/llm_generated_code_c/CMakeFiles/task13.dir
+/home/kali/CLionProjects/llm_generated_code_c/CMakeFiles/task15.dir
+/home/kali/CLionProjects/llm_generated_code_c/CMakeFiles/task19.dir
+/home/kali/CLionProjects/llm_generated_code_c/CMakeFiles/task20.dir
+/home/kali/CLionProjects/llm_generated_code_c/CMakeFiles/edit_cache.dir
+/home/kali/CLionProjects/llm_generated_code_c/CMakeFiles/rebuild_cache.dir

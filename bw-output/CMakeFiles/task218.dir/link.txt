@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtask218.a "CMakeFiles/task218.dir/source/output/llama-3/c/Task175_PERPLEXITY_llama-3-sonar-large-32k-chat.c.o"
+/usr/bin/ranlib libtask218.a

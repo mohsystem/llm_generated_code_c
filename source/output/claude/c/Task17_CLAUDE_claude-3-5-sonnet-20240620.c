@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 char* to_jaden_case(char* string) {
-    if (string == NULL || *string == '\\0') return string;
+    if (string == NULL || *string == '\0') return string;
     
     char* result = malloc(strlen(string) + 1);
     char* p = result;
@@ -21,7 +21,7 @@ char* to_jaden_case(char* string) {
             *p++ = *string++;
         }
     }
-    *p = '\\0';
+    *p = '\0';
     
     return result;
 }
