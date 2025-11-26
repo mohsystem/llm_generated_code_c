@@ -1,14 +1,3 @@
-# For most projects, this workflow file will not need changing; you simply need
-# to commit it to your repository.
-#
-# You may wish to alter this file to override the set of languages analyzed,
-# or to provide custom queries or build logic.
-#
-# ******** NOTE ********
-# We have attempted to detect the languages in your repository. Please check
-# the `language` matrix defined below to confirm you have the correct set of
-# supported CodeQL languages.
-#
 name: "CodeQL Advanced"
 
 on:
@@ -33,87 +22,55 @@ jobs:
       fail-fast: false
       matrix:
         include:
-        - language: c-cpp
-          # Use manual build so we can reuse prebuilt artifacts (compile_commands.json) you've pushed.
-          build-mode: manual
-        - language: javascript-typescript
-          build-mode: none
-        - language: python
-          build-mode: none
+          - language: c-cpp
+            build-mode: manual
+          - language: javascript-typescript
+            build-mode: none
+          - language: python
+            build-mode: none
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Initialize CodeQL
-      uses: github/codeql-action/init@v4
-      with:
-        languages: ${{ matrix.language }}
-        build-mode: ${{ matrix.build-mode }}
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v4
+        with:
+          languages: ${{ matrix.language }}
+          build-mode: ${{ matrix.build-mode }}
 
-    - name: Reuse existing build artifacts (copy compile_commands.json from known dirs)
-      if: matrix.build-mode == 'manual' && matrix.language == 'c-cpp'
-      shell: bash
-      run: |
-        set -euo pipefail
-        echo "Looking for compile_commands.json in bw-output and cmake-build-debug (repo root)..."
+      # This is the important part for C/C++
+      - name: Build C and C++ code with CMake
+        if: matrix.language == 'c-cpp' && matrix.build-mode == 'manual'
+        shell: bash
+        run: |
+          set -euo pipefail
 
-        copy_compile_db() {
-          local src="$1"
-          if [ -f "$src" ]; then
-            echo "Found compile_commands.json at: $src"
-            cp "$src" ./compile_commands.json
-            ls -l compile_commands.json || true
-            return 0
+          echo "Detecting CMake source directory..."
+          if [ -f CMakeLists.txt ]; then
+            SRC_DIR="."
+          elif [ -f source/CMakeLists.txt ]; then
+            SRC_DIR="source"
+          else
+            echo "::error::Could not find CMakeLists.txt in . or source/. Adjust SRC_DIR in this step."
+            exit 1
           fi
-          return 1
-        }
 
-        # Check top-level expected locations first
-        if copy_compile_db "bw-output/compile_commands.json"; then
-          exit 0
-        fi
-        if copy_compile_db "cmake-build-debug/compile_commands.json"; then
-          exit 0
-        fi
+          echo "Configuring CMake build in cmake-build-debug..."
+          cmake -S "$SRC_DIR" -B cmake-build-debug -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 
-        # If not directly at those paths, try searching within them (covers nested placement)
-        if [ -d "bw-output" ]; then
-          COMP_DB=$(find bw-output -maxdepth 4 -type f -name compile_commands.json -print -quit || true)
-          if [ -n "${COMP_DB:-}" ]; then
-            echo "Found compile_commands.json under bw-output at: $COMP_DB"
-            cp "$COMP_DB" ./compile_commands.json
+          echo "Building project..."
+          cmake --build cmake-build-debug --config Debug -j"$(nproc)"
+
+          # Optional: keep a compile_commands.json at repo root for editors or other tools
+          if [ -f cmake-build-debug/compile_commands.json ]; then
+            cp cmake-build-debug/compile_commands.json ./compile_commands.json
             ls -l compile_commands.json || true
-            exit 0
+          else
+            echo "Warning: no compile_commands.json produced in cmake-build-debug."
           fi
-        fi
 
-        if [ -d "cmake-build-debug" ]; then
-          COMP_DB=$(find cmake-build-debug -maxdepth 4 -type f -name compile_commands.json -print -quit || true)
-          if [ -n "${COMP_DB:-}" ]; then
-            echo "Found compile_commands.json under cmake-build-debug at: $COMP_DB"
-            cp "$COMP_DB" ./compile_commands.json
-            ls -l compile_commands.json || true
-            exit 0
-          fi
-        fi
-
-        # As a fallback, look elsewhere in repo (optional)
-        COMP_DB=$(find . -maxdepth 6 -type f -name compile_commands.json -print -quit || true)
-        if [ -n "${COMP_DB:-}" ]; then
-          echo "Found compile_commands.json elsewhere in repo at: $COMP_DB"
-          cp "$COMP_DB" ./compile_commands.json
-          ls -l compile_commands.json || true
-          exit 0
-        fi
-
-        echo "::error::No compile_commands.json found in bw-output or cmake-build-debug (or nearby). CodeQL needs a compilation database or an actual build step that generates it."
-        echo "Possible fixes:"
-        echo "- Push the compile_commands.json generated from your build-wrapper/CMake (from bw-output or cmake-build-debug) to the repository."
-        echo "- Or update this workflow to run the build commands instead of reusing prebuilt artifacts."
-        exit 1
-
-    - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v4
-      with:
-        category: "/language:${{matrix.language}}"
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v4
+        with:
+          category: "/language:${{ matrix.language }}"
