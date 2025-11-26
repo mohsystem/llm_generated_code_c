@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
+//compilation error, include '<string.h>' or provide a declaration of 'strcspn'
+//so we added #include <string.h>
 int main() {
     char filename[256];
     printf("Enter the filename: ");

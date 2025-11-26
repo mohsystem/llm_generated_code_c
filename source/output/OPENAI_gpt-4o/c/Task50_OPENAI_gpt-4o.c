@@ -3,16 +3,20 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
-#include <arpa/inet.h>
-
+// #include <arpa/inet.h>
+#include <ws2tcpip.h>
 #define PORT 8080
 #define BUFSIZE 1024
 #define UPLOAD_DIR "uploads/"
-
+//compilation error, dependancies
 void error_handling(const char *message) {
     perror(message);
     exit(1);
 }
+
+// void mkdir(char * str, int i);
+
+void mkdir1(char * str, int i);
 
 int main() {
     int server_fd, new_socket;
@@ -20,7 +24,7 @@ int main() {
     int addrlen = sizeof(address);
     char buffer[BUFSIZE] = {0};
 
-    mkdir(UPLOAD_DIR, 0777);
+    mkdir1(UPLOAD_DIR, 0777);
 
     if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0) {
         error_handling("socket failed");

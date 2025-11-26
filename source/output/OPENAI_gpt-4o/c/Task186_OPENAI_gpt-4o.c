@@ -1,7 +1,9 @@
 // C code for merging k sorted linked lists
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
+//compilation error, add import #include <string.h>
 struct ListNode {
     int val;
     struct ListNode *next;
@@ -25,7 +27,7 @@ struct ListNode* mergeKLists(struct ListNode** lists, int listsSize) {
             l = l->next;
         }
     }
-    
+    //note: 'strcmp' is defined in header '<string.h>'; did you forget to '#include <string.h>'
     qsort(heap, heapSize, sizeof(int), (int(*)(const void*, const void*)) strcmp);
     
     struct ListNode* dummy = createNode(0);

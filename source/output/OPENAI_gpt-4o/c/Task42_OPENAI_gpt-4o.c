@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <openssl/sha.h>
-
+//compilation error, dependancies
 #define MAX_USERS 100
 #define USERNAME_SIZE 50
 #define PASSWORD_HASH_SIZE 65

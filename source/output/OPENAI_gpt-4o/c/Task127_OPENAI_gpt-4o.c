@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//syntax error,
 void copy_file(const char *source_path, const char *dest_path) {
     FILE *source = fopen(source_path, "rb");
     if (source == NULL) {
@@ -29,14 +30,17 @@ int main() {
     const char *source_path = "/path/to/source/file.txt";
     const char *dest_path = "/path/to/dest/tmp_file.txt";
 
-    try {
-        copy_file(source_path, dest_path);
-        printf("File copied successfully.\n");
-    } catch (const std::exception &e) {
-        fprintf(stderr, "%s\n", e.what());
-    } catch (...) {
-        fprintf(stderr, "An unexpected error occurred.\n");
-    }
 
+    copy_file(source_path, dest_path);
+    printf("File copied successfully.\n");
+//syntax error
+    // try {
+    //     copy_file(source_path, dest_path);
+    //     printf("File copied successfully.\n");
+    // } catch (const std::exception &e) {
+    //     fprintf(stderr, "%s\n", e.what());
+    // } catch (...) {
+    //     fprintf(stderr, "An unexpected error occurred.\n");
+    // }
     return 0;
 }

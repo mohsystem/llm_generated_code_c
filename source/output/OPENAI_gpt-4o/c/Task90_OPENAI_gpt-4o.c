@@ -2,9 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include <arpa/inet.h>
+// #include <arpa/inet.h>
 #include <pthread.h>
-
+#include <winsock2.h>
+//compilation error, dependancies
 int clients[100];
 int n = 0;
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;

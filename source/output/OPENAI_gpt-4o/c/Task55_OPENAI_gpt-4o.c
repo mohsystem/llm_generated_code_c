@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <regex.h>
-
+//compilation error, dependancies
 int validateEmail(const char *email) {
     const char *pattern = "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$";
     regex_t regex;

@@ -4,7 +4,7 @@
 #include <openssl/sha.h>
 #include <openssl/x509.h>
 #include <openssl/pem.h>
-
+//compilation error, dependancies
 void get_cert_hash(const char *cert_path, char *output) {
     FILE *file = fopen(cert_path, "rb");
     if (!file) {

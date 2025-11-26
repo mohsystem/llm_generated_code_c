@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <openssl/sha.h>
-
+//compilation error, dependancies
 void compute_hash(const char* password, const char* salt, char* outputBuffer) {
     char combined[512];
     snprintf(combined, sizeof(combined), "%s%s", password, salt);

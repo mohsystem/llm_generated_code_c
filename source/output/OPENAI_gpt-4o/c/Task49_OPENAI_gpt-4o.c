@@ -3,7 +3,7 @@
 #include <string.h>
 #include <microhttpd.h>
 #include <sqlite3.h>
-
+//compilation error, dependancies
 #define PORT 8888
 
 static int answer_to_connection(void *cls, struct MHD_Connection *connection,

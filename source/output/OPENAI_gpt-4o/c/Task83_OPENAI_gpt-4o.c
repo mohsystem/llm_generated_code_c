@@ -4,7 +4,7 @@
 #include <openssl/aes.h>
 #include <openssl/rand.h>
 #include <openssl/evp.h>
-
+//compilation error, dependancies
 void handleErrors(void) {
     ERR_print_errors_fp(stderr);
     abort();

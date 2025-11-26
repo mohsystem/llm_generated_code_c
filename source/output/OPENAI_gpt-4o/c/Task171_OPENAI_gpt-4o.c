@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
-
+//compilation error, add import #include <stdlib.h>
 int merge_sort(int* nums, int start, int end, int* temp) {
     if (end - start <= 1) {
         return 0;
@@ -41,6 +42,7 @@ int merge_sort(int* nums, int start, int end, int* temp) {
 }
 
 int reversePairs(int* nums, int numsSize) {
+    //note: include '<stdlib.h>' or provide a declaration of 'malloc'
     int* temp = (int*)malloc(numsSize * sizeof(int));
     int count = merge_sort(nums, 0, numsSize, temp);
     free(temp);

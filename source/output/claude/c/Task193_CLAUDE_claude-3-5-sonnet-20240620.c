@@ -1,4 +1,6 @@
 
+#include <stdbool.h>
+
 bool xorGame(int* nums, int numsSize) {
     int xorSum = 0;
     for (int i = 0; i < numsSize; i++) {

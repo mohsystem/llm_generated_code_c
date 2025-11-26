@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <fcgi_stdio.h>
-
+//compilation error, dependancies
 #define CSRF_TOKEN "aCSRFtoken"
 
 void generate_html(char *csrf_token) {
@@ -13,6 +13,8 @@ void generate_html(char *csrf_token) {
     printf("<button type='submit'>Save</button>");
     printf("</form>");
 }
+
+void getline(char ** post_data, size_t * len, FCGI_FILE * fcgi_file);
 
 void handle_request() {
     char *method = getenv("REQUEST_METHOD");

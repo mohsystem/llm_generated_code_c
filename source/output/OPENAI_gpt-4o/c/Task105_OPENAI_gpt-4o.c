@@ -1,11 +1,12 @@
+#include <io.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <openssl/ssl.h>
 #include <openssl/err.h>
-#include <netdb.h>
-#include <unistd.h>
-
-void connect(const char *hostname, int port) {
+// #include <netdb.h>
+// #include <unistd.h>
+//compilation error, dependancies
+void connect1(const char *hostname, int port) {
     SSL_library_init();
     SSL_CTX *ctx = SSL_CTX_new(SSLv23_client_method());
     if (!ctx) {
@@ -36,6 +37,6 @@ void connect(const char *hostname, int port) {
 }
 
 int main() {
-    connect("example.com", 443);
+    connect1("example.com", 443);
     return 0;
 }

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <regex.h>
-
+//compilation error, dependancies
 bool validateURL(const char *url) {
     regex_t regex;
     const char *pattern = "^(http|https|ftp)://([^\\s/$.?#].[^\\s]*)$";

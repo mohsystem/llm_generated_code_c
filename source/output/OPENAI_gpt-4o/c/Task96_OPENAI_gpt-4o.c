@@ -2,8 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include <arpa/inet.h>
-
+#include <winsock2.h>
+#include <ws2tcpip.h>
+// #include <arpa/inet.h>
+//compilation error, dependancies
 void c_server() {
     int server_fd, new_socket;
     struct sockaddr_in address;

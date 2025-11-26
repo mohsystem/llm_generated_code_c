@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <openssl/sha.h>
 #include <sqlite3.h>
-
+//compilation error, dependancies and missing include :  note: include '<string.h>' or provide a declaration of 'strlen'
 void hashPassword(const char* password, char* outputBuffer) {
     unsigned char hash[SHA256_DIGEST_LENGTH];
     SHA256_CTX sha256;

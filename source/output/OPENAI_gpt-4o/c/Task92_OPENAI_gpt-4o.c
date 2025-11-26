@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <pthread.h>
+#include <stdlib.h>
 
 #define MAX_COUNTER 10
-
+//compilation error, include '<stdlib.h>' or provide a declaration of 'free'
 int currentCounter = 0;
 pthread_mutex_t lock;
 

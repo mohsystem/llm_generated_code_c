@@ -3,7 +3,7 @@
 #include <string.h>
 #include <jansson.h>
 #include <libbase64.h>
-
+//compilation error, dependancies
 // Function to process the request
 char* process_request(const char* req);
 

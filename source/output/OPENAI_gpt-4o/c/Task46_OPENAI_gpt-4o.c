@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <sqlite3.h>
-
+#include <string.h>
+//compilation error, include '<string.h>' or provide a declaration of 'strcspn'
+//so we added #include <string.h>
 void createTable() {
     sqlite3 *db;
     char *errMsg = 0;

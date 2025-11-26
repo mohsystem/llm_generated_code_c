@@ -3,7 +3,7 @@
 #include <string.h>
 #include <openssl/evp.h>
 #include <openssl/aes.h>
-
+//compilation error, dependancies
 void handleErrors() {
     ERR_print_errors_fp(stderr);
     abort();

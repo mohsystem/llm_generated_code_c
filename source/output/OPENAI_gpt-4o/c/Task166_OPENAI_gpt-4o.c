@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
+//compilation error, add import #include <string.h>
 void posNegSort(int* lst, int size, int* result) {
     int* pos_nums = (int*)malloc(size * sizeof(int));
     int pos_index = 0, result_index = 0;
@@ -8,7 +9,7 @@ void posNegSort(int* lst, int size, int* result) {
     for (int i = 0; i < size; ++i) {
         if (lst[i] > 0) pos_nums[pos_index++] = lst[i];
     }
-    
+    // note: 'strcmp' is defined in header '<string.h>'; did you forget to '#include <string.h>'?
     qsort(pos_nums, pos_index, sizeof(int), (int(*)(const void*, const void*)) strcmp);
     
     pos_index = 0;

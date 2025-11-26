@@ -2,10 +2,12 @@
 
 #include <stdio.h>
 #include <string.h>
-#include <arpa/inet.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-
+// #include <arpa/inet.h>
+#include <winsock2.h>
+#include <ws2tcpip.h>
+// #include <sys/socket.h>
+// #include <netinet/in.h>
+//compilation error, dependancies
 int main() {
     int sock = socket(AF_INET, SOCK_DGRAM, 0);
     struct sockaddr_in serverAddr, clientAddr;

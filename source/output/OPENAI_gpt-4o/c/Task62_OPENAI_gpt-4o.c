@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <jansson.h>
-
+//compilation error, dependancies
 int main() {
     const char *jsonString = "{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}";
 

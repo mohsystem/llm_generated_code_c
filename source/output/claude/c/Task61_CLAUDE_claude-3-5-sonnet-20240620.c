@@ -21,7 +21,7 @@ const char* get_root_element(const char* xml_string) {
 }
 
 int main() {
-    const char* xml_str = "<root><child1>Content</child1><child2 attr=\\"value\\"/></root>";
+    const char* xml_str = "<root><child1>Content</child1><child2 attr=\"value\"/></root>";
     printf("%s\\n", get_root_element(xml_str));
     return 0;
 }

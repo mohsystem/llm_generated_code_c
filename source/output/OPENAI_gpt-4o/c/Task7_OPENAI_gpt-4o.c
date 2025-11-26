@@ -3,9 +3,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include <arpa/inet.h>
+#include <winsock2.h>
 #include <pthread.h>
-//compilation error, dependancies
+#include <ws2tcpip.h>
+//compilation error, , add import #include <ws2tcpip.h>
 
 #define PORT 12345
 #define BUFFER_SIZE 1024

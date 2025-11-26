@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <arpa/inet.h>
+// #include <arpa/inet.h>
 #include <unistd.h>
+#include <ws2tcpip.h>
 #include <openssl/ssl.h>
 #include <openssl/err.h>
-
+//compilation error, dependancies
 int create_ssl_client_socket(const char *hostname, int port) {
     SSL_CTX *ctx = SSL_CTX_new(TLS_client_method());
     if (!ctx) {

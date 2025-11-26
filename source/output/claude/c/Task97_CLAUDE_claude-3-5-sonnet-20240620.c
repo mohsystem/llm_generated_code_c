@@ -12,7 +12,7 @@ void execute_xpath(const char* filename, const char* xpathExpr) {
 
     doc = xmlParseFile(filename);
     if (doc == NULL) {
-        fprintf(stderr, "Error: unable to parse file \\"%s\\"\\n", filename);
+        fprintf(stderr, "Error: unable to parse file \"%s\"\\n", filename);
         return;
     }
 
@@ -25,7 +25,7 @@ void execute_xpath(const char* filename, const char* xpathExpr) {
 
     xpathObj = xmlXPathEvalExpression((xmlChar*)xpathExpr, xpathCtx);
     if(xpathObj == NULL) {
-        fprintf(stderr,"Error: unable to evaluate xpath expression \\"%s\\"\\n", xpathExpr);
+        fprintf(stderr,"Error: unable to evaluate xpath expression \"%s\"\\n", xpathExpr);
         xmlXPathFreeContext(xpathCtx);
         xmlFreeDoc(doc);
         return;

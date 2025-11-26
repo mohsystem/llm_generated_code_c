@@ -3,9 +3,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include <arpa/inet.h>
-#include <sys/socket.h>
+// #include <arpa/inet.h>
+// #include <sys/socket.h>
 #include <pthread.h>
+#include <ws2tcpip.h>
 
 #define MAX_CLIENTS 10
 #define BUFFER_SIZE 1024
@@ -115,5 +116,7 @@ Response authenticate(Credentials creds) {
             return response;
         }
     }
-
-    strcpy(response', type='text')
+    // syntax error and missing rest of the function.fixed that
+    //   return response;\n        }\n    }\n\n    strcpy(response', type='text')
+    // strcpy(response', type='text')
+}

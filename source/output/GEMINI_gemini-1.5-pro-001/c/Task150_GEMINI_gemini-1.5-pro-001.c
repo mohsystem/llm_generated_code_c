@@ -1,64 +1,93 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Node structure for the linked list
 struct Node {
     int data;
-    struct Node *next;
+    struct Node* next;
 };
 
-struct LinkedList {
-    struct Node *head;
-};
-
-struct LinkedList *create_list() {
-    struct LinkedList *list = (struct LinkedList *)malloc(sizeof(struct LinkedList));
-    list->head = NULL;
-    return list;
+// Function to create a new node
+struct Node* newNode(int value) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = value;
+    newNode->next = NULL;
+    return newNode;
 }
 
-void insert(struct LinkedList *list, int data) {
-    struct Node *new_node = (struct Node *)malloc(sizeof(struct Node));
-    new_node->data = data;
-    new_node->next = NULL;
-
-    if (list->head == NULL) {
-        list->head = new_node;
-        return;
-    }
-
-    struct Node *current_node = list->head;
-    while (current_node->next != NULL) {
-        current_node = current_node->next;
-    }
-
-    current_node->next = new_node;
+// Function to insert a new node at the beginning of the list
+void insert(struct Node** head, int value) {
+    struct Node* newNode = newNode(value);
+    newNode->next = *head;
+    *head = newNode;
 }
 
-void delete(struct LinkedList *list, int data) {
-    if (list->head == NULL) {
+// Function to delete a node with a given value
+void deleteNode(struct Node** head, int value) {
+    struct Node* current = *head;
+    struct Node* previous = NULL;
+
+    while (current != NULL && current->data != value) {
+        previous = current;
+        current = current->next;
+    }
+
+    if (current == NULL) {
+        printf("Value not found in the list.");
         return;
     }
 
-    if (list->head->data == data) {
-        list->head = list->head->next;
-        return;
+    if (previous == NULL) {
+        *head = current->next;
+    } else {
+        previous->next = current->next;
     }
 
-    struct Node *current_node = list->head;
-    struct Node *prev_node = NULL;
-    while (current_node != NULL && current_node->data != data) {
-        prev_node = current_node;
-        current_node = current_node->next;
-    }
-
-    if (current_node == NULL) {
-        return;
-    }
-
-    prev_node->next = current_node->next;
+    free(current);
 }
 
-int search(struct LinkedList *list, int data) {
-    struct Node *current_node = list->head;
-    while (current_node != NULL && current_node->data != data) {
-        current_node = current_node->next;
+// Function to search for a node with a given value
+int search(struct Node* head, int value) {
+    struct Node* current = head;
+
+    while (current != NULL) {
+        if (current->data == value) {
+            return 1;
+        }
+        current = current->next;
+    }
+
+    return 0;
+}
+
+// Function to print the linked list
+void printList(struct Node* head) {
+    struct Node* current = head;
+
+    while (current != NULL) {
+        printf("%d ", current->data);
+        current = current->next;
+    }
+
+    printf("");
+}
+
+int main() {
+    struct Node* head = NULL;
+
+    insert(&head, 10);
+    insert(&head, 20);
+    insert(&head, 30);
+
+    printf("Linked list: ");
+    printList(head);
+
+    printf("Searching for 20: %d", search(head, 20));
+
+    deleteNode(&head, 20);
+
+    printf("Linked list after deleting 20: ");
+    printList(head);
+
+    return 0;
+}

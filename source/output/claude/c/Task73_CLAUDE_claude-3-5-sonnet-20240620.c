@@ -21,7 +21,7 @@ bool isValidAdminPassword(const char* password) {
         if (isupper(password[i])) hasUppercase = true;
         if (islower(password[i])) hasLowercase = true;
         if (isdigit(password[i])) hasDigit = true;
-        if (strchr("!@#$%^&*(),.?\\":{}|<>", password[i])) hasSpecialChar = true;
+        if (strchr("!@#$%^&*(),.?\":{}|<>", password[i])) hasSpecialChar = true;
     }
 
     if (!hasUppercase || !hasLowercase || !hasDigit || !hasSpecialChar) {

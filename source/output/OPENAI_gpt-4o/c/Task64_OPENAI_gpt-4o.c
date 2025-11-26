@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <curl/curl.h>
 #include <json-c/json.h>
-
+#include <json-c/json_object.h>
+//compilation error, dependancies
 struct string {
     char* ptr;
     size_t len;

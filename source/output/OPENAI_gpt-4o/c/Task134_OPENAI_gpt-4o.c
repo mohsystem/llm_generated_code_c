@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <openssl/rsa.h>
 #include <openssl/pem.h>
-
+//compilation error
 void save_key(RSA* rsa, const char* filename) {
     FILE* file = fopen(filename, "wb");
+    //warning: 'PEM_write_RSAPrivateKey' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
     PEM_write_RSAPrivateKey(file, rsa, NULL, NULL, 0, NULL, NULL);
     fclose(file);
 }
@@ -19,9 +20,9 @@ int main() {
     RSA* rsa = RSA_generate_key(2048, RSA_F4, NULL, NULL);
     save_key(rsa, "private_key.pem");
     RSA* loaded_rsa = load_key("private_key.pem");
-    char* key_str = BN_bn2hex(loaded_rsa->p);
-    printf("Key: %s\n", key_str);
-    OPENSSL_free(key_str);
+    // char* key_str = BN_bn2hex(loaded_rsa->p);
+    // printf("Key: %s\n", key_str);
+    // OPENSSL_free(key_str);
     RSA_free(rsa);
     RSA_free(loaded_rsa);
     return 0;

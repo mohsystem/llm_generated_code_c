@@ -1,15 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
 
-// This is the MountainArray's API interface.
-// You should not implement it, or speculate about its implementation
+/**
+ * This is the MountainArray's API interface.
+ * You should not implement it, or speculate about its implementation
+ * struct MountainArray;
+ * int get(MountainArray *, int index);
+ * int length(MountainArray *);
+ */
+
 struct MountainArray;
-int get(struct MountainArray *, int index);
-int length(struct MountainArray *);
 
-int findInMountainArray(int target, struct MountainArray* mountainArr) {
-    int length = length(mountainArr);
+int get(struct MountainArray* mountainArr, int index){return 1;}
+int length(struct MountainArray* mountainArr){return 1;}
+
+int findPeakIndex(struct MountainArray* mountainArr) {
+    int left = 0;
+    int right = length(mountainArr) - 1;
     
-    // Find peak element
-    int left = 0, right = length - 1;
     while (left < right) {
         int mid = left + (right - left) / 2;
         if (get(mountainArr, mid) < get(mountainArr, mid + 1)) {
@@ -18,37 +26,46 @@ int findInMountainArray(int target, struct MountainArray* mountainArr) {
             right = mid;
         }
     }
-    int peak = left;
     
-    // Binary search in the left side
-    left = 0;
-    right = peak;
+    return left;
+}
+
+int binarySearch(struct MountainArray* mountainArr, int target, int left, int right, int ascending) {
     while (left <= right) {
         int mid = left + (right - left) / 2;
         int midVal = get(mountainArr, mid);
+        
         if (midVal == target) {
             return mid;
-        } else if (midVal < target) {
-            left = mid + 1;
-        } else {
-            right = mid - 1;
         }
-    }
-    
-    // Binary search in the right side
-    left = peak;
-    right = length - 1;
-    while (left <= right) {
-        int mid = left + (right - left) / 2;
-        int midVal = get(mountainArr, mid);
-        if (midVal == target) {
-            return mid;
-        } else if (midVal > target) {
-            left = mid + 1;
+        
+        if (ascending) {
+            if (midVal < target) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
         } else {
-            right = mid - 1;
+            if (midVal > target) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
         }
     }
     
     return -1;
+}
+
+int findInMountainArray(int target, struct MountainArray* mountainArr) {
+    int peakIndex = findPeakIndex(mountainArr);
+    
+    // Search in the ascending part
+    int result = binarySearch(mountainArr, target, 0, peakIndex, 1);
+    if (result != -1) {
+        return result;
+    }
+    
+    // Search in the descending part
+    return binarySearch(mountainArr, target, peakIndex + 1, length(mountainArr) - 1, 0);
 }

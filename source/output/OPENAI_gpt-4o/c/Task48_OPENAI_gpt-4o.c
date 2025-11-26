@@ -3,8 +3,10 @@
 #include <string.h>
 #include <unistd.h>
 #include <pthread.h>
-#include <arpa/inet.h>
-
+#include <winsock2.h>
+#include <ws2tcpip.h>
+// #include <arpa/inet.h>
+//compilation error, dependancies
 #define PORT 5555
 #define MAX_CLIENTS 100
 

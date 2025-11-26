@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <curl/curl.h>
-
+//compilation error, dependancies
 struct MemoryStruct {
     char *memory;
     size_t size;

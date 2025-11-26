@@ -9,7 +9,7 @@ cJSON* parse_json_and_get_root(const char* json_string) {
 }
 
 int main() {
-    const char* json_string = "{\\"name\\": \\"John\\", \\"age\\": 30, \\"city\\": \\"New York\\"}";
+    const char* json_string = "{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}";
     cJSON* root_element = parse_json_and_get_root(json_string);
     
     if (root_element != NULL) {

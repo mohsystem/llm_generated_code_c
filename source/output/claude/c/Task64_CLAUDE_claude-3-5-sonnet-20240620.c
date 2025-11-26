@@ -4,7 +4,7 @@
 #include <string.h>
 #include <curl/curl.h>
 #include <json-c/json.h>
-
+#include <json-c/json_object.h>
 struct MemoryStruct {
     char *memory;
     size_t size;

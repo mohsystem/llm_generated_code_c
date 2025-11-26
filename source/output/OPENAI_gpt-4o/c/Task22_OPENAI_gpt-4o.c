@@ -1,5 +1,5 @@
 #include <stdio.h>
-//compilation error, warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+//compilation error,  warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
 char* is_integer(char * str);
 void filter_list(void *[], int , int);
 int main() {

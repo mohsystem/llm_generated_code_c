@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
-
+//compilation error, add import #include <stdlib.h>
 void reverse(char *str) {
     int n = strlen(str);
     for (int i = 0; i < n / 2; i++) {
@@ -16,6 +17,7 @@ char* shortestPalindrome(char* s) {
     reverse(rev_s);
     for (int i = 0; i <= strlen(s); i++) {
         if (strncmp(s, rev_s + i, strlen(s) - i) == 0) {
+            // warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
             char *result = (char*)malloc(50000);
             strcpy(result, rev_s);
             result[i] = '\0';

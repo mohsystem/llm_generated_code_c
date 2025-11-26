@@ -4,7 +4,7 @@
 #include <openssl/pem.h>
 #include <openssl/err.h>
 #include <string.h>
-
+//compilation error, dependancies
 int main() {
     int bits = 2048;
     unsigned long e = RSA_F4;

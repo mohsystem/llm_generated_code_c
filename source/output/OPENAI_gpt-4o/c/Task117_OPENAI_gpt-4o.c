@@ -4,7 +4,7 @@
 #include <zip.h>
 #include <archive.h>
 #include <archive_entry.h>
-
+//compilation error, dependancies
 void extract_zip(const char *file_path, const char *extract_to) {
     int err = 0;
     struct zip *archive = zip_open(file_path, 0, &err);

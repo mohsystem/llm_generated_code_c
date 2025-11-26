@@ -4,11 +4,11 @@
 #include <string.h>
 #include <microhttpd.h>
 
-#define PAGE "<html><body>"\\
-             "<form action=\\"/\\" method=\\"post\\">"\\
-             "Name: <input type=\\"text\\" name=\\"name\\"/>"\\
-             "<input type=\\"submit\\" value=\\"Submit\\"/>"\\
-             "</form>"\\
+#define PAGE "<html><body>"\
+             "<form action=\"/\" method=\"post\">"\
+             "Name: <input type=\"text\" name=\"name\"/>"\
+             "<input type=\"submit\" value=\"Submit\"/>"\
+             "</form>"\
              "</body></html>"
 
 #define MAX_NAME_LENGTH 64
@@ -38,8 +38,7 @@ static int answer_to_connection(void *cls, struct MHD_Connection *connection,
         }
         if (*upload_data_size != 0) {
             char name[MAX_NAME_LENGTH];
-            if (MHD_post_process(connection, upload_data, *upload_data_size,
-                                 "name", name, MAX_NAME_LENGTH) == MHD_NO) {
+            if (MHD_post_process(connection, upload_data, *upload_data_size)) {
                 return MHD_NO;
             }
             *upload_data_size = 0;

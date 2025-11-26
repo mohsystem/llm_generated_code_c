@@ -1,8 +1,18 @@
 #include <stdio.h>
 #include <ldap.h>
+#include <Winldap.h>
 #include <string.h>
 #include <stdlib.h>
 #include <json-c/json.h>
+#include <json-c/json_object.h>
+//compilation error, dependancies
+
+int ldap_initialize(LDAP **ld, char *str) {
+    return 0;
+}
+
+void ldap_unbind_ext_s(LDAP *ld, void *p, void *p1) {
+}
 
 int main(int argc, char *argv[]) {
     char *domainComponent = argv[1];

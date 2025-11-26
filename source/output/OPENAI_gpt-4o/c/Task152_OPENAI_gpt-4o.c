@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 #define SIZE 10
-
+//compilation error, add import #include <stdlib.h>
 typedef struct {
     int key;
     char value[256];
@@ -16,6 +17,7 @@ int hashFunction(int key) {
 
 void insert(int key, const char* value) {
     int hashKey = hashFunction(key);
+    //   warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
     table[hashKey] = malloc(sizeof(HashEntry));
     table[hashKey]->key = key;
     strcpy(table[hashKey]->value, value);

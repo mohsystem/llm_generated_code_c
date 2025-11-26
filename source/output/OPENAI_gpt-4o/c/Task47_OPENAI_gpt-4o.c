@@ -4,7 +4,7 @@
 #include <sqlite3.h>
 #include <curl/curl.h>
 #include <gumbo.h>
-
+//compilation error, dependancies
 static size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *userp) {
     size_t totalSize = size * nmemb;
     strcat(userp, (char*)contents);

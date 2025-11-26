@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
-
+#include <sys/types.h>
+//compilation error, may due to windows enviroments
 int main() {
     if (geteuid() != 0) {
         fprintf(stderr, "This script must be run as root!\n");

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <openssl/aes.h>
 #include <openssl/rand.h>
-
+//compilation error, dependancies
 void writeKeyToFile(const unsigned char* key, const char* filename) {
     FILE* fp = fopen(filename, "wb");
     if (fp != NULL) {

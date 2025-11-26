@@ -1,58 +1,73 @@
-
-// C doesn't have built-in support for creating web servers or handling CORS.\n// Implementing CORS would typically be done at a higher level using a web framework or library.\n// This example is a basic socket server that sets CORS headers, but it's not a complete solution.
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
-#include <arpa/inet.h>
+#include <winsock2.h>
+
+#pragma comment(lib, "ws2_32.lib")
 
 #define PORT 8080
 #define BUFFER_SIZE 1024
 
 int main() {
-    int server_fd, new_socket;
+    WSADATA wsaData;
+    SOCKET server_fd, new_socket;
     struct sockaddr_in address;
     int addrlen = sizeof(address);
     char buffer[BUFFER_SIZE] = {0};
-    char *response = "HTTP/1.1 200 OK\\r\\n"
-                     "Access-Control-Allow-Origin: *\\r\\n"
-                     "Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS\\r\\n"
-                     "Access-Control-Allow-Headers: Content-Type\\r\\n"
-                     "Content-Type: application/json\\r\\n\\r\\n"
-                     "{\\"message\\": \\"This is CORS-enabled data\\"}";
+    const char *response = "HTTP/1.1 200 OK\r\n"
+                     "Access-Control-Allow-Origin: *\r\n"
+                     "Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS\r\n"
+                     "Access-Control-Allow-Headers: Content-Type\r\n"
+                     "Content-Type: application/json\r\n\r\n"
+                     "{\"message\": \"This is CORS-enabled data\"}";
 
-    if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0) {
-        perror("socket failed");
-        exit(EXIT_FAILURE);
+    // Initialize Winsock
+    if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
+        printf("WSAStartup failed\n");
+        return 1;
+    }
+
+    if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == INVALID_SOCKET) {
+        printf("socket failed with error: %d\n", WSAGetLastError());
+        WSACleanup();
+        return 1;
     }
 
     address.sin_family = AF_INET;
     address.sin_addr.s_addr = INADDR_ANY;
     address.sin_port = htons(PORT);
 
-    if (bind(server_fd, (struct sockaddr *)&address, sizeof(address)) < 0) {
-        perror("bind failed");
-        exit(EXIT_FAILURE);
+    if (bind(server_fd, (struct sockaddr *)&address, sizeof(address)) == SOCKET_ERROR) {
+        printf("bind failed with error: %d\n", WSAGetLastError());
+        closesocket(server_fd);
+        WSACleanup();
+        return 1;
     }
 
-    if (listen(server_fd, 3) < 0) {
-        perror("listen");
-        exit(EXIT_FAILURE);
+    if (listen(server_fd, 3) == SOCKET_ERROR) {
+        printf("listen failed with error: %d\n", WSAGetLastError());
+        closesocket(server_fd);
+        WSACleanup();
+        return 1;
     }
 
     while(1) {
-        printf("Waiting for a connection...\\n");
-        if ((new_socket = accept(server_fd, (struct sockaddr *)&address, (socklen_t*)&addrlen)) < 0) {
-            perror("accept");
-            exit(EXIT_FAILURE);
+        printf("Waiting for a connection...\n");
+        if ((new_socket = accept(server_fd, (struct sockaddr *)&address, &addrlen)) == INVALID_SOCKET) {
+            printf("accept failed with error: %d\n", WSAGetLastError());
+            closesocket(server_fd);
+            WSACleanup();
+            return 1;
         }
 
-        read(new_socket, buffer, BUFFER_SIZE);
-        printf("%s\\n", buffer);
-        write(new_socket, response, strlen(response));
-        close(new_socket);
+        recv(new_socket, buffer, BUFFER_SIZE, 0);
+        printf("%s\n", buffer);
+        send(new_socket, response, (int)strlen(response), 0);
+        closesocket(new_socket);
     }
+
+    closesocket(server_fd);
+    WSACleanup();
 
     return 0;
 }

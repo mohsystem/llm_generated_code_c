@@ -5,9 +5,10 @@
 #include <string.h>
 #include <sys/stat.h>
 #include <unistd.h>
-//compilation error,  error: 'struct dirent' has no member named 'd_type', comment the line
+//compilation error, error: 'struct dirent' has no member named 'd_type', comment the line
 //we fixed as: Commented out d_type Check: Instead of checking entry->d_type == DT_REG, we use stat to get the file
 //status and check if it is a regular file using S_ISREG.
+
 
 pthread_mutex_t lock;
 

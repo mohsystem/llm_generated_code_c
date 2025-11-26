@@ -3,7 +3,7 @@
 #include <openssl/evp.h>
 #include <openssl/aes.h>
 #include <openssl/rand.h>
-
+//compilation error, dependancies
 void encrypt(const char *message, const char *secretKey, unsigned char *encryptedMessage) {
     unsigned char key[32], iv[32];
     EVP_CIPHER_CTX *ctx = EVP_CIPHER_CTX_new();
