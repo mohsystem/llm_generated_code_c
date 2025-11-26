@@ -1,4 +1,4 @@
-name: "CodeQL Advanced"
+name: "CodeQL C/C++"
 
 on:
   push:
@@ -6,28 +6,17 @@ on:
   pull_request:
     branches: [ "master" ]
   schedule:
-    - cron: '42 7 * * 4'
+    - cron: "42 7 * * 4"
 
 jobs:
   analyze:
-    name: Analyze (${{ matrix.language }})
-    runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
+    name: Analyze C/C++
+    runs-on: ubuntu-latest
     permissions:
       security-events: write
       packages: read
       actions: read
       contents: read
-
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - language: c-cpp
-            build-mode: manual
-          - language: javascript-typescript
-            build-mode: none
-          - language: python
-            build-mode: none
 
     steps:
       - name: Checkout repository
@@ -36,12 +25,10 @@ jobs:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v4
         with:
-          languages: ${{ matrix.language }}
-          build-mode: ${{ matrix.build-mode }}
+          languages: c-cpp
+          build-mode: manual
 
-      # This is the important part for C/C++
-      - name: Build C and C++ code with CMake
-        if: matrix.language == 'c-cpp' && matrix.build-mode == 'manual'
+      - name: Build C/C++ with CMake
         shell: bash
         run: |
           set -euo pipefail
@@ -56,21 +43,28 @@ jobs:
             exit 1
           fi
 
-          echo "Configuring CMake build in cmake-build-debug..."
-          cmake -S "$SRC_DIR" -B cmake-build-debug -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+          # Use a fresh build directory so we do not reuse your local cmake-build-debug cache
+          BUILD_DIR="codeql-build"
+
+          echo "Cleaning and creating build directory: $BUILD_DIR"
+          rm -rf "$BUILD_DIR"
+          mkdir -p "$BUILD_DIR"
+
+          echo "Configuring CMake in $BUILD_DIR..."
+          cmake -S "$SRC_DIR" -B "$BUILD_DIR" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 
           echo "Building project..."
-          cmake --build cmake-build-debug --config Debug -j"$(nproc)"
+          cmake --build "$BUILD_DIR" --config Debug -j"$(nproc)"
 
-          # Optional: keep a compile_commands.json at repo root for editors or other tools
-          if [ -f cmake-build-debug/compile_commands.json ]; then
-            cp cmake-build-debug/compile_commands.json ./compile_commands.json
+          # Optional: copy compile_commands.json to repo root if you want it for editors
+          if [ -f "$BUILD_DIR/compile_commands.json" ]; then
+            cp "$BUILD_DIR/compile_commands.json" ./compile_commands.json
             ls -l compile_commands.json || true
           else
-            echo "Warning: no compile_commands.json produced in cmake-build-debug."
+            echo "Warning: no compile_commands.json produced in $BUILD_DIR."
           fi
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v4
         with:
-          category: "/language:${{ matrix.language }}"
+          category: "/language:c-cpp"
