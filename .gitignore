@@ -1,2 +1,7 @@
 /.scannerwork/
 /.idea/
+/bw-output/
+/cmake-build-debug/
+/CMakeFiles/
+/.scannerwork/
+/.idea/

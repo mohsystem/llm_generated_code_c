@@ -1,2 +1,0 @@
-/usr/bin/ar qc libtask602.a "CMakeFiles/task602.dir/source/output/claude/c/Task144_CLAUDE_claude-3-5-sonnet-20240620.c.o"
-/usr/bin/ranlib libtask602.a

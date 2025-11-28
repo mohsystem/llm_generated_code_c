@@ -1,2 +1,0 @@
-/usr/bin/ar qc libtask863.a "CMakeFiles/task863.dir/source/output/codestral/c/Task137_MISTRAL_codestral-latest.c.o"
-/usr/bin/ranlib libtask863.a

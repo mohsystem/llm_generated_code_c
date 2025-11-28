@@ -1,2 +1,0 @@
-/usr/bin/ar qc libtask30.a "CMakeFiles/task30.dir/source/output/gpt4o/c/Task55_OPENAI_gpt-4o.c.o"
-/usr/bin/ranlib libtask30.a

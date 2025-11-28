@@ -1,1 +1,0 @@
-File '/home/kali/CLionProjects/llm_generated_code_c/tests/claude/Task121_Test/file_not_found.txt' not found.

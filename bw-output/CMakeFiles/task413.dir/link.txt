@@ -1,2 +1,0 @@
-/usr/bin/ar qc libtask413.a "CMakeFiles/task413.dir/source/output/gemini/c/Task123_GEMINI_gemini-1.5-pro-001.c.o"
-/usr/bin/ranlib libtask413.a

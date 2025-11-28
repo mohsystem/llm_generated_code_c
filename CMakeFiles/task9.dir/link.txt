@@ -1,1 +1,0 @@
-/usr/bin/cc "CMakeFiles/task9.dir/source/output/gpt4o/c/Task59_OPENAI_gpt-4o.c.o" -o task9 

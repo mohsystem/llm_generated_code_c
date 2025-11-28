@@ -1,2 +1,0 @@
-/usr/bin/ar qc libtask256.a "CMakeFiles/task256.dir/source/output/llama-3/c/Task168_PERPLEXITY_llama-3-sonar-large-32k-chat.c.o"
-/usr/bin/ranlib libtask256.a

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/llm_generated_code_c.iml" filepath="$PROJECT_DIR$/.idea/llm_generated_code_c.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/llm-generated-code-c.iml" filepath="$PROJECT_DIR$/.idea/llm-generated-code-c.iml" />
     </modules>
   </component>
 </project>

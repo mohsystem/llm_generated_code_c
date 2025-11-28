@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/llm_generated_code_c.dir/tests/gpt4o/Task60_Test.c.o -o llm_generated_code_c  -lm 

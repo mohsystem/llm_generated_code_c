@@ -1,2 +1,0 @@
-/usr/bin/ar qc libtask790.a "CMakeFiles/task790.dir/source/output/claude/c/Task18_CLAUDE_claude-3-5-sonnet-20240620.c.o"
-/usr/bin/ranlib libtask790.a

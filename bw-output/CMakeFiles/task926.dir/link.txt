@@ -1,2 +1,0 @@
-/usr/bin/ar qc libtask926.a "CMakeFiles/task926.dir/source/output/codestral/c/Task168_MISTRAL_codestral-latest.c.o"
-/usr/bin/ranlib libtask926.a
