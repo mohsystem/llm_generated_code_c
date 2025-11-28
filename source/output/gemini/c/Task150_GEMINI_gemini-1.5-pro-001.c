@@ -8,9 +8,7 @@ struct Node {
 };
 
 // Function to create a new node
-//error: called object ‘newNode’ is not a function or function pointer. we did rename only.LLM used the function name same as variable name.
-struct Node*
-    newNode1(int value) {
+struct Node* newNode(int value) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = value;
     newNode->next = NULL;
@@ -19,7 +17,7 @@ struct Node*
 
 // Function to insert a new node at the beginning of the list
 void insert(struct Node** head, int value) {
-    struct Node* newNode = newNode1(value);
+    struct Node* newNode = newNode(value);
     newNode->next = *head;
     *head = newNode;
 }
