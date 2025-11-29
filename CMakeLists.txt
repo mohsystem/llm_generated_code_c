@@ -5,7 +5,7 @@ set(CMAKE_C_STANDARD 11)
 include_directories(C:/Users/pc/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic/include)
 include_directories(C:/Users/pc/.vcpkg-clion/vcpkg1/installed/x64-windows/include)
 
-add_library(llm_generated_code_c main.c
+add_executable(llm_generated_code_c main.c
         source/output/gpt4o/c/Task0_OPENAI_gpt-4o.c
         source/output/gpt4o/c/Task1_OPENAI_gpt-4o.c
         source/output/gpt4o/c/Task2_OPENAI_gpt-4o.c
@@ -206,8 +206,7 @@ add_library(llm_generated_code_c main.c
         source/output/gpt4o/c/Task197_OPENAI_gpt-4o.c
         source/output/gpt4o/c/Task198_OPENAI_gpt-4o.c
         source/output/gpt4o/c/Task199_OPENAI_gpt-4o.c
-       )
-add_library(llm_generated_code_c2 source/output/claude/c/Task0_CLAUDE_claude-3-5-sonnet-20240620.c
+       source/output/claude/c/Task0_CLAUDE_claude-3-5-sonnet-20240620.c
         source/output/claude/c/Task1_CLAUDE_claude-3-5-sonnet-20240620.c
         source/output/claude/c/Task2_CLAUDE_claude-3-5-sonnet-20240620.c
         source/output/claude/c/Task3_CLAUDE_claude-3-5-sonnet-20240620.c
@@ -406,8 +405,7 @@ add_library(llm_generated_code_c2 source/output/claude/c/Task0_CLAUDE_claude-3-5
         source/output/claude/c/Task196_CLAUDE_claude-3-5-sonnet-20240620.c
         source/output/claude/c/Task197_CLAUDE_claude-3-5-sonnet-20240620.c
         source/output/claude/c/Task198_CLAUDE_claude-3-5-sonnet-20240620.c
-        source/output/claude/c/Task199_CLAUDE_claude-3-5-sonnet-20240620.c)
-add_library(llm_generated_code_c3
+        source/output/claude/c/Task199_CLAUDE_claude-3-5-sonnet-20240620.c
         source/output/gemini/c/Task0_GEMINI_gemini-1.5-pro-001.c
         source/output/gemini/c/Task1_GEMINI_gemini-1.5-pro-001.c
         source/output/gemini/c/Task2_GEMINI_gemini-1.5-pro-001.c
@@ -608,9 +606,6 @@ add_library(llm_generated_code_c3
         source/output/gemini/c/Task197_GEMINI_gemini-1.5-pro-001.c
         source/output/gemini/c/Task198_GEMINI_gemini-1.5-pro-001.c
         source/output/gemini/c/Task199_GEMINI_gemini-1.5-pro-001.c
-)
-
-add_library(llm_generated_code_c4
         source/output/llama-3/c/Task0_PERPLEXITY_llama-3-sonar-large-32k-chat.c
         source/output/llama-3/c/Task1_PERPLEXITY_llama-3-sonar-large-32k-chat.c
         source/output/llama-3/c/Task2_PERPLEXITY_llama-3-sonar-large-32k-chat.c
@@ -811,10 +806,6 @@ add_library(llm_generated_code_c4
         source/output/llama-3/c/Task197_PERPLEXITY_llama-3-sonar-large-32k-chat.c
         source/output/llama-3/c/Task198_PERPLEXITY_llama-3-sonar-large-32k-chat.c
         source/output/llama-3/c/Task199_PERPLEXITY_llama-3-sonar-large-32k-chat.c
-)
-
-
-add_library(llm_generated_code_c5
         source/output/codestral/c/Task0_MISTRAL_codestral-latest.c
         source/output/codestral/c/Task1_MISTRAL_codestral-latest.c
         source/output/codestral/c/Task2_MISTRAL_codestral-latest.c
