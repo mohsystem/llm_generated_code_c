@@ -1,9 +1,20 @@
 cmake_minimum_required(VERSION 3.28)
 project(llm_generated_code_c C)
 
-set(CMAKE_C_STANDARD 11)
-include_directories(C:/Users/pc/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic/include)
-include_directories(C:/Users/pc/.vcpkg-clion/vcpkg1/installed/x64-windows/include)
+
+#set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
+include_directories(/home/kali/.vcpkg-clion/vcpkg/installed/x64-linux/include/)
+include_directories(/home/kali/CLionProjects/mysql-connector-cpp/driver/)
+include_directories(/home/kali/workingDirectory/programs/clion-2024.1.4/jbr/include/linux/ /home/kali/workingDirectory/programs/clion-2024.1.4/jbr/include/)
+#include_directories(/usr/include/)
+#find_package(unofficial-sqlite3 CONFIG REQUIRED)
+find_package(cpprestsdk REQUIRED)
+#target_link_libraries(main PRIVATE cpprestsdk::cpprest)
+
+#find_package(httplib CONFIG REQUIRED)
+#find_package(bson-1.0 CONFIG REQUIRED)
+#target_link_libraries(main PRIVATE unofficial::qlite3)
 
 add_executable(llm_generated_code_c main.c
         source/output/gpt4o/c/Task0_OPENAI_gpt-4o.c
@@ -13,7 +24,7 @@ add_executable(llm_generated_code_c main.c
         source/output/gpt4o/c/Task4_OPENAI_gpt-4o.c
         source/output/gpt4o/c/Task5_OPENAI_gpt-4o.c
         source/output/gpt4o/c/Task6_OPENAI_gpt-4o.c
-        source/output/gpt4o/c/Task7_OPENAI_gpt-4o.c
+#        source/output/gpt4o/c/Task7_OPENAI_gpt-4o.c
         source/output/gpt4o/c/Task8_OPENAI_gpt-4o.c
         source/output/gpt4o/c/Task9_OPENAI_gpt-4o.c
         source/output/gpt4o/c/Task10_OPENAI_gpt-4o.c
