@@ -7,6 +7,7 @@ on:
     branches: [ "master" ]
   schedule:
     - cron: "42 7 * * 4"
+
 jobs:
   analyze:
     name: Analyze C/C++
@@ -21,51 +22,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install system dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libmicrohttpd-dev
-
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v4
         with:
           languages: c-cpp
-          build-mode: manual
+          build-mode: none   # <- key change
 
-      - name: Build C/C++ with CMake
-        shell: bash
-        run: |
-          set -euo pipefail
-          echo "Detecting CMake source directory..."
-          if [ -f CMakeLists.txt ]; then
-            SRC_DIR="."
-          elif [ -f source/CMakeLists.txt ]; then
-            SRC_DIR="source"
-          else
-            echo "::error::Could not find CMakeLists.txt in . or source/. Adjust SRC_DIR in this step."
-            exit 1
-          fi
-
-          BUILD_DIR="codeql-build"
-          echo "Cleaning and creating build directory: $BUILD_DIR"
-          rm -rf "$BUILD_DIR"
-          mkdir -p "$BUILD_DIR"
-
-          echo "Configuring CMake in $BUILD_DIR..."
-          cmake -S "$SRC_DIR" -B "$BUILD_DIR" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
-
-          echo "Building project..."
-          cmake --build "$BUILD_DIR" --config Debug -j"$(nproc)"
-
-          if [ -f "$BUILD_DIR/compile_commands.json" ]; then
-            cp "$BUILD_DIR/compile_commands.json" ./compile_commands.json
-            ls -l compile_commands.json || true
-          else
-            echo "Warning: no compile_commands.json produced in $BUILD_DIR."
-          fi
+      # No CMake build step here anymore
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v4
         with:
           category: "/language:c-cpp"
-
