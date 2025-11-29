@@ -1,63 +1,46 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <errno.h>
 
-#define BUFFER_SIZE 1024
-
-int main(int argc, char *argv[]) {
-    if (argc != 2) {
-        fprintf(stderr, "Usage: %s <input_file>\n", argv[0]);
-        return 1;
+//syntax error,
+void copy_file(const char *source_path, const char *dest_path) {
+    FILE *source = fopen(source_path, "rb");
+    if (source == NULL) {
+        perror("Error: Cannot open source file");
+        exit(EXIT_FAILURE);
     }
 
-    char *input_file = argv[1];
-    char temp_file[] = "temp_file.txt";
-
-    FILE *fp_in, *fp_out;
-
-    // Open input file
-    fp_in = fopen(input_file, "rb");
-    if (fp_in == NULL) {
-        fprintf(stderr, "Error opening input file: %s\n", strerror(errno));
-        return 1;
+    FILE *dest = fopen(dest_path, "wb");
+    if (dest == NULL) {
+        perror("Error: Cannot open destination file");
+        fclose(source);
+        exit(EXIT_FAILURE);
     }
 
-    // Create temporary file
-    fp_out = fopen(temp_file, "wb");
-    if (fp_out == NULL) {
-        fprintf(stderr, "Error creating temporary file: %s\n", strerror(errno));
-        fclose(fp_in);
-        return 1;
+    char buffer[1024];
+    size_t bytes;
+    while ((bytes = fread(buffer, 1, sizeof(buffer), source)) > 0) {
+        fwrite(buffer, 1, bytes, dest);
     }
 
-    // Copy data from input file to temporary file
-    char buffer[BUFFER_SIZE];
-    size_t bytes_read;
-    while ((bytes_read = fread(buffer, 1, sizeof(buffer), fp_in)) > 0) {
-        if (fwrite(buffer, 1, bytes_read, fp_out) != bytes_read) {
-            fprintf(stderr, "Error writing to temporary file\n");
-            fclose(fp_in);
-            fclose(fp_out);
-            remove(temp_file); // Delete partially written temp file
-            return 1;
-        }
-    }
+    fclose(source);
+    fclose(dest);
+}
 
-    // Check for errors during reading
-    if (ferror(fp_in)) {
-        fprintf(stderr, "Error reading from input file\n");
-        fclose(fp_in);
-        fclose(fp_out);
-        remove(temp_file); // Delete partially written temp file
-        return 1;
-    }
+int main() {
+    const char *source_path = "/path/to/source/file.txt";
+    const char *dest_path = "/path/to/dest/tmp_file.txt";
 
-    // Close files
-    fclose(fp_in);
-    fclose(fp_out);
 
-    printf("File copied successfully to %s\n", temp_file);
-
+    copy_file(source_path, dest_path);
+    printf("File copied successfully.\n");
+//syntax error
+    // try {
+    //     copy_file(source_path, dest_path);
+    //     printf("File copied successfully.\n");
+    // } catch (const std::exception &e) {
+    //     fprintf(stderr, "%s\n", e.what());
+    // } catch (...) {
+    //     fprintf(stderr, "An unexpected error occurred.\n");
+    // }
     return 0;
 }
